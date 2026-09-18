@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blue-sora.local/schemas/build-manifest.schema.json",
+  "type": "object",
+  "required": ["schema_version", "generator_version", "corpus_fingerprint", "inputs", "outputs"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "generator_version": {"type": "string", "minLength": 1},
+    "corpus_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "inputs": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "outputs": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+  },
+  "additionalProperties": false
+}

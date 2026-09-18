@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blue-sora.local/schemas/work.schema.json",
+  "$defs": {
+    "edition": {
+      "type": "object",
+      "required": ["name", "publisher", "first_publication", "input_edition", "proof_edition"],
+      "properties": {
+        "name": {"type": ["string", "null"]},
+        "publisher": {"type": ["string", "null"]},
+        "first_publication": {"type": ["string", "null"]},
+        "input_edition": {"type": ["string", "null"]},
+        "proof_edition": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "required": ["id", "kind", "build_path", "original_url", "status", "sha256", "byte_size"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["gaiji", "illustration"]},
+        "build_path": {"type": "string", "pattern": "^canonical/assets/"},
+        "original_url": {"type": "string", "minLength": 1},
+        "status": {"const": "stored"},
+        "mime_type": {"type": ["string", "null"]},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "byte_size": {"type": "integer", "minimum": 1},
+        "diagnostic": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "analytics": {
+      "type": "object",
+      "required": ["model_version", "status", "metrics", "difficulty", "diagnostics", "provenance"],
+      "properties": {
+        "model_version": {"type": "string", "minLength": 1},
+        "status": {"enum": ["ok", "outlier", "failed"]},
+        "metrics": {"type": "object"},
+        "difficulty": {"type": "object"},
+        "diagnostics": {"type": "array"},
+        "provenance": {"type": "object"}
+      },
+      "additionalProperties": true
+    },
+    "diagnostic": {
+      "type": "object",
+      "required": ["source", "items"],
+      "properties": {
+        "source": {"enum": ["ingestion", "analysis"]},
+        "items": {"type": "array"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "required": ["schema_version", "id", "aozora_work_id", "slug", "title", "author_ids", "edition", "assets", "analytics", "diagnostics", "content", "source", "reproducibility"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "pattern": "^aozora:work:[0-9]{6}$"},
+    "aozora_work_id": {"type": "string", "pattern": "^[0-9]{6}$"},
+    "slug": {"type": "string", "pattern": "^aozora-[0-9]{6}$"},
+    "title": {"type": "object", "required": ["display", "reading", "subtitle"], "properties": {"display": {"type": "string", "minLength": 1}, "reading": {"type": ["string", "null"]}, "subtitle": {"type": ["string", "null"]}}, "additionalProperties": false},
+    "author_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^aozora:person:[0-9]{6}$"}},
+    "first_publication": {"type": ["string", "null"]},
+    "orthography": {"type": ["string", "null"]},
+    "published_at": {"type": ["string", "null"]},
+    "edition": {"$ref": "#/$defs/edition"},
+    "assets": {"type": "array", "items": {"$ref": "#/$defs/asset"}},
+    "analytics": {"$ref": "#/$defs/analytics"},
+    "diagnostics": {"type": "array", "items": {"$ref": "#/$defs/diagnostic"}},
+    "content": {"type": "object", "required": ["body", "bibliography", "notation_notes"]},
+    "source": {"type": "object", "required": ["card_url", "xhtml_url", "metadata", "provenance"]},
+    "reproducibility": {"type": "object", "required": ["input_sha256", "generator_version"], "properties": {"input_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "generator_version": {"type": "string"}}, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

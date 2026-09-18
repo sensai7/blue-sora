@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-intro">
+  <p class="eyebrow">Foundation</p>
+  <h1>Design system</h1>
+  <p class="lede">Color, type, spacing, interaction, and reading components used throughout Blue Sora.</p>
+</section>
+<section class="specimen" aria-labelledby="color-title">
+  <h2 id="color-title">Color</h2>
+  <div class="swatches">
+    <div class="swatch swatch--ink"><span>Ink</span><code>#111827</code></div>
+    <div class="swatch swatch--paper"><span>Paper</span><code>#f4f0e7</code></div>
+    <div class="swatch swatch--blue"><span>Sora</span><code>#1d4ed8</code></div>
+    <div class="swatch swatch--red"><span>Seal</span><code>#a33a32</code></div>
+  </div>
+</section>
+<section class="specimen" aria-labelledby="type-title">
+  <h2 id="type-title">Typography</h2>
+  <p class="display-sample">Stories leave weather behind.</p>
+  <p class="japanese-sample" lang="ja">吾輩は猫である。名前はまだ無い。<ruby>青空<rt>あおぞら</rt></ruby>を読む。</p>
+</section>
+<section class="specimen" aria-labelledby="component-title">
+  <h2 id="component-title">Cover and card</h2>
+  <div class="component-row">{% with work=sample_work %}{% include "partials/work-card.html" %}{% endwith %}</div>
+</section>
+{% endblock %}

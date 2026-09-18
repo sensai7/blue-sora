@@ -1,0 +1,15 @@
+<article class="work-card" data-work-id="{{ work.id }}">
+  {% with title=work.title %}{% include "partials/cover.html" %}{% endwith %}
+  <div class="work-card-copy">
+    <p class="eyebrow">{{ "{:,}".format(work.metrics.length_words | int) }} words</p>
+    <h3 lang="ja"><a href="{{ root_prefix }}works/{{ work.slug }}/index.html">{{ work.title }}</a></h3>
+    {% if work.title_reading %}<p class="reading" lang="ja">{{ work.title_reading }}</p>{% endif %}
+    <p class="author">{% for author in work.authors %}{{ author.name }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+    <p class="work-metadata"><span>{{ work.orthography }}</span>{% if work.has_illustrations %}<span>Illustrated</span>{% endif %}</p>
+    {% if work.difficulty.average_difficulty is not none %}
+      <p class="difficulty"><span>Difficulty</span><strong>{{ "%.0f" | format(work.difficulty.average_difficulty) }}</strong></p>
+    {% else %}
+      <p class="difficulty difficulty--unscored"><span>Difficulty</span><strong>Review</strong></p>
+    {% endif %}
+  </div>
+</article>

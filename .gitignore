@@ -1,0 +1,40 @@
+# Python bytecode and tooling
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Packaging and generated site output. The deployable static artifact is
+# intentionally versioned because the private corpus inputs are not.
+build/*
+!build/site/
+!build/site/**
+dist/
+/site/
+generated/
+*.egg-info/
+
+# External and reproducibly generated corpus data
+aozora_corpus/
+aozora.csv
+reduced_corpus/
+reduced_aozora.csv

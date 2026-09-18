@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Blue Sora">
+  <rect width="64" height="64" fill="#173a8f"/>
+  <path d="M14 22h36M18 32h28M23 42h18" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="4"/>
+  <circle cx="47" cy="15" r="5" fill="#f4f0e7"/>
+</svg>

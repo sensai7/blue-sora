@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blue-sora.local/schemas/author.schema.json",
+  "type": "object",
+  "required": ["schema_version", "id", "aozora_person_id", "slug", "name", "work_ids"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "pattern": "^aozora:person:[0-9]{6}$"},
+    "aozora_person_id": {"type": "string", "pattern": "^[0-9]{6}$"},
+    "slug": {"type": "string", "pattern": "^aozora-person-[0-9]{6}$"},
+    "name": {
+      "type": "object",
+      "required": ["display", "family", "given", "romanized"],
+      "properties": {
+        "display": {"type": "string", "minLength": 1},
+        "family": {"type": "string"},
+        "given": {"type": "string"},
+        "reading": {"type": "string"},
+        "romanized": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "birth_date": {"type": ["string", "null"]},
+    "death_date": {"type": ["string", "null"]},
+    "copyright": {"type": ["string", "null"]},
+    "work_ids": {"type": "array", "items": {"type": "string", "pattern": "^aozora:work:[0-9]{6}$"}, "uniqueItems": true}
+  },
+  "additionalProperties": false
+}

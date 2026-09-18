@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blue-sora.local/schemas/catalog.schema.json",
+  "type": "object",
+  "required": ["schema_version", "works"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "works": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "slug", "title", "title_reading", "subtitle", "authors", "published_at", "orthography", "metrics", "difficulty", "asset_count", "has_illustrations"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^aozora:work:[0-9]{6}$"},
+          "slug": {"type": "string"},
+          "title": {"type": "string", "minLength": 1},
+          "title_reading": {"type": ["string", "null"]},
+          "subtitle": {"type": ["string", "null"]},
+          "authors": {"type": "array", "minItems": 1},
+          "published_at": {"type": ["string", "null"]},
+          "orthography": {"type": ["string", "null"]},
+          "metrics": {"type": "object"},
+          "difficulty": {"type": "object"},
+          "asset_count": {"type": "integer", "minimum": 0},
+          "has_illustrations": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

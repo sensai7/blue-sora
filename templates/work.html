@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="reading-progress" data-reading-progress role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<article class="work-detail" data-reader data-work-id="{{ work.id }}">
+  <header class="work-hero">
+    <div class="work-cover-column">
+      {% with title=work.title.display %}{% include "partials/cover.html" %}{% endwith %}
+      <p class="cover-caption">Aozora work {{ work.aozora_work_id }}</p>
+    </div>
+    <div class="work-essential">
+      <p class="eyebrow">Public-domain Japanese literature</p>
+      <h1 lang="ja">{{ work.title.display }}</h1>
+      {% if work.title.reading %}<p class="work-reading" lang="ja">{{ work.title.reading }}</p>{% endif %}
+      {% if work.title.subtitle %}<p class="work-subtitle" lang="ja">{{ work.title.subtitle }}</p>{% endif %}
+      <p class="work-byline">
+        {% for author in authors %}<span lang="ja">{{ author.name.display }}</span><small>{{ author.name.romanized }}</small>{% if not loop.last %}<span aria-hidden="true"> · </span>{% endif %}{% endfor %}
+      </p>
+      <dl class="essential-data">
+        <div><dt>First published</dt><dd>{{ work.first_publication or "Not recorded" }}</dd></div>
+        <div><dt>Aozora release</dt><dd><time datetime="{{ work.published_at }}">{{ work.published_at }}</time></dd></div>
+        <div><dt>Orthography</dt><dd>{{ work.orthography }}</dd></div>
+        <div><dt>Edition</dt><dd>{{ work.edition.name or "Not recorded" }}</dd></div>
+        <div><dt>Publisher</dt><dd>{{ work.edition.publisher or "Not recorded" }}</dd></div>
+        <div><dt>Source</dt><dd><a href="{{ work.source.card_url }}">Aozora Bunko card</a></dd></div>
+      </dl>
+      <div class="export-actions" aria-label="Download formats">
+        {% for export in exports %}
+        <div class="export-action export-action--{{ export.status }}">
+          {% if export.status == "available" %}
+            <a class="button" href="{{ export.url }}" download aria-label="Download {{ export.format }} for {{ work.title.display }}">Download {{ export.format }}</a>
+          {% else %}
+            <button class="button" type="button" disabled aria-label="{{ export.format }} unavailable for {{ work.title.display }}">Download {{ export.format }}</button>
+          {% endif %}
+          <span class="export-state"{% if export.status == "error" %} role="alert"{% endif %}>{{ export.detail }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+
+  <section class="difficulty-panel" aria-labelledby="difficulty-title">
+    <div class="difficulty-summary">
+      <p class="eyebrow">Learner profile</p>
+      <h2 id="difficulty-title">Difficulty statistics</h2>
+      {% if work.analytics.difficulty.average_difficulty is not none %}
+        <p class="difficulty-score"><strong>{{ "%.0f" | format(work.analytics.difficulty.average_difficulty) }}</strong><span>out of 100</span></p>
+      {% else %}
+        <p class="difficulty-score difficulty-score--unscored"><strong>Review</strong><span>score withheld as an outlier</span></p>
+      {% endif %}
+      <p class="metric-note">Model {{ work.analytics.model_version }} · status: {{ work.analytics.status }}</p>
+    </div>
+    <dl class="metric-grid">
+      <div><dt>Words</dt><dd>{{ "{:,}".format(work.analytics.metrics.length_words) }}</dd></div>
+      <div><dt>Characters</dt><dd>{{ "{:,}".format(work.analytics.metrics.characters) }}</dd></div>
+      <div><dt>Sentences</dt><dd>{{ "{:,}".format(work.analytics.metrics.sentences) }}</dd></div>
+      <div><dt>Average sentence</dt><dd>{{ "%.1f" | format(work.analytics.metrics.average_sentence_length) }} words</dd></div>
+      <div><dt>Unique words</dt><dd>{{ "{:,}".format(work.analytics.metrics.unique_words) }}</dd></div>
+      <div><dt>Unique kanji</dt><dd>{{ "{:,}".format(work.analytics.metrics.unique_kanji) }}</dd></div>
+      <div><dt>Single-use words</dt><dd>{{ "{:,}".format(work.analytics.metrics.hapax_words) }} · {{ "%.1f" | format(work.analytics.metrics.hapax_words_percent) }}%</dd></div>
+      <div><dt>Single-use kanji</dt><dd>{{ "{:,}".format(work.analytics.metrics.hapax_kanji) }}</dd></div>
+      <div><dt>Lexical rarity</dt><dd>{{ "%.1f" | format(work.analytics.difficulty.components.lexical_rarity) }} · weight {{ "%.0f" | format(work.analytics.difficulty.weights.lexical_rarity * 100) }}%</dd></div>
+      <div><dt>Kanji rarity</dt><dd>{{ "%.1f" | format(work.analytics.difficulty.components.kanji_rarity) }} · weight {{ "%.0f" | format(work.analytics.difficulty.weights.kanji_rarity * 100) }}%</dd></div>
+      <div><dt>Sentence complexity</dt><dd>{{ "%.1f" | format(work.analytics.difficulty.components.sentence_complexity) }} · weight {{ "%.0f" | format(work.analytics.difficulty.weights.sentence_complexity * 100) }}%</dd></div>
+      <div><dt>Lexical surprisal</dt><dd>{{ "%.3f" | format(work.analytics.difficulty.raw.average_lexical_surprisal) }}</dd></div>
+      <div><dt>Kanji surprisal</dt><dd>{{ "%.3f" | format(work.analytics.difficulty.raw.average_kanji_surprisal) }}</dd></div>
+    </dl>
+  </section>
+
+  {% if toc %}
+  <nav class="work-toc" aria-labelledby="toc-title">
+    <p class="eyebrow">In this work</p>
+    <h2 id="toc-title">Contents</h2>
+    <details{% if toc|length <= 12 %} open{% endif %}>
+      <summary>{{ toc|length }} sections</summary>
+      <ol>{% for entry in toc %}<li class="toc-level-{{ entry.level }}"><a href="#{{ entry.id }}">{{ entry.label }}</a></li>{% endfor %}</ol>
+    </details>
+  </nav>
+  {% endif %}
+
+  <section class="reader-shell" aria-labelledby="read-here">
+    <header class="reader-heading">
+      <div><p class="eyebrow">Online reader</p><h2 id="read-here">Read here</h2></div>
+      <div class="reader-controls" aria-label="Reading display controls">
+        <button type="button" data-font-decrease aria-label="Decrease reader text size">A−</button>
+        <button type="button" data-font-reset aria-label="Reset reader text size">A</button>
+        <button type="button" data-font-increase aria-label="Increase reader text size">A+</button>
+      </div>
+    </header>
+    <p class="reader-resume" data-reader-resume aria-live="polite"></p>
+    <div class="reader-content" lang="ja" data-reader-content>
+      {{ rendered_body }}
+    </div>
+  </section>
+
+  {% if rendered_notes %}
+  <aside class="work-notes" aria-labelledby="notes-title">
+    <h2 id="notes-title">Notation notes</h2>{{ rendered_notes }}
+  </aside>
+  {% endif %}
+  {% if rendered_bibliography %}
+  <section class="work-bibliography" aria-labelledby="bibliography-title">
+    <h2 id="bibliography-title">Source and edition notes</h2>{{ rendered_bibliography }}
+  </section>
+  {% endif %}
+</article>
+{% endblock %}
