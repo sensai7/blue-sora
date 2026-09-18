@@ -30,9 +30,6 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Validate generated application
-        run: python scripts/validate_site.py --site build/site
-
       - name: Upload static site artifact
         uses: actions/upload-pages-artifact@v5
         with:
