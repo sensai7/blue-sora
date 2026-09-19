@@ -46,7 +46,7 @@
       {% if work.analytics.difficulty.average_difficulty is not none %}
         <p class="difficulty-score"><strong>{{ "%.0f" | format(work.analytics.difficulty.average_difficulty) }}</strong><span>out of 100</span></p>
       {% else %}
-        <p class="difficulty-score difficulty-score--unscored"><strong>Review</strong><span>score withheld as an outlier</span></p>
+        <p class="difficulty-score difficulty-score--unscored"><strong>Unavailable</strong><span>score withheld as an outlier</span></p>
       {% endif %}
       <p class="metric-note">Model {{ work.analytics.model_version }} · status: {{ work.analytics.status }}</p>
     </div>

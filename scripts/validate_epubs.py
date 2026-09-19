@@ -11,6 +11,7 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from blue_sora.epub import validate_epub
+from blue_sora.reader import export_filename
 
 
 def count_node_type(value: object, node_type: str) -> int:
@@ -31,6 +32,8 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     catalog = json.loads((args.catalog / "indexes" / "catalog.json").read_text(encoding="utf-8"))
+    author_index = json.loads((args.catalog / "indexes" / "authors.json").read_text(encoding="utf-8"))
+    authors = {author["id"]: author for author in author_index["authors"]}
     total_entries = 0
     total_xhtml = 0
     work_records = []
@@ -38,7 +41,7 @@ def main() -> None:
         raw_id = work["id"].rsplit(":", 1)[-1]
         record = json.loads((args.catalog / "works" / f"{raw_id}.json").read_text(encoding="utf-8"))
         work_records.append(record)
-        path = args.site / "downloads" / f'{work["slug"]}.epub'
+        path = args.site / "downloads" / export_filename(record, [authors[item] for item in record["author_ids"]], "epub")
         if not path.is_file():
             raise SystemExit(f"Missing EPUB: {path}")
         result = validate_epub(path, expected_identifier=work["id"])

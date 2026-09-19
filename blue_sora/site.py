@@ -213,8 +213,8 @@ def build_site(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
             rendered_notes=notation_notes.html,
             rendered_bibliography=bibliography.html,
             exports=[
-                export_state(output_dir, work["slug"], "epub", "../../"),
-                export_state(output_dir, work["slug"], "pdf", "../../"),
+                export_state(output_dir, work, [author_records[author_id] for author_id in work["author_ids"]], "epub", "../../"),
+                export_state(output_dir, work, [author_records[author_id] for author_id in work["author_ids"]], "pdf", "../../"),
             ],
         )
         outputs[destination.relative_to(output_dir).as_posix()] = checksum

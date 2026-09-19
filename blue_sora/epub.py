@@ -15,6 +15,8 @@ from typing import Any, Iterable
 from urllib.parse import unquote, urlsplit
 from xml.etree import ElementTree
 
+from .reader import export_filename
+
 
 EPUB_GENERATOR_VERSION = "blue-sora-epub-v1"
 EPUB_NAMESPACE = "http://www.idpf.org/2007/ops"
@@ -452,12 +454,13 @@ def build_epubs(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
     for catalog_work in catalog["works"]:
         raw_id = catalog_work["id"].rsplit(":", 1)[-1]
         work = json.loads((catalog_dir / "works" / f"{raw_id}.json").read_text(encoding="utf-8"))
-        filename = f'{work["slug"]}.epub'
+        work_authors = [authors[author_id] for author_id in work["author_ids"]]
+        filename = export_filename(work, work_authors, "epub")
         expected.add(filename)
         destination = download_dir / filename
         error_marker = download_dir / f"{filename}.error.txt"
         try:
-            payload = build_epub(work, [authors[author_id] for author_id in work["author_ids"]], catalog_dir)
+            payload = build_epub(work, work_authors, catalog_dir)
             validation = validate_epub_bytes(payload, expected_identifier=work["id"])
             checksum, changed = write_bytes_if_changed(destination, payload)
             if error_marker.is_file():

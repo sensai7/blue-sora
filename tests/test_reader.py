@@ -4,10 +4,17 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from blue_sora.reader import export_state, render_blocks
+from blue_sora.reader import export_filename, export_state, render_blocks
 
 
 class ReaderTests(unittest.TestCase):
+    work = {
+        "id": "aozora:work:000001",
+        "aozora_work_id": "000001",
+        "title": {"display": "青空：第一部", "reading": "あおぞら", "subtitle": None},
+    }
+    authors = [{"name": {"display": "著者", "romanized": "Author"}}]
+
     def test_renderer_preserves_semantic_inline_content(self) -> None:
         blocks = [
             {
@@ -42,20 +49,27 @@ class ReaderTests(unittest.TestCase):
 
     def test_export_states_cover_available_unavailable_and_error(self) -> None:
         output = Path("build/site")
+        epub_name = "著者-青空：第一部-aozora-000001.epub"
+        pdf_name = "著者-青空：第一部-aozora-000001.pdf"
         with mock.patch("blue_sora.reader.Path.is_file", autospec=True, return_value=False):
-            self.assertEqual(export_state(output, "sample", "epub")["status"], "unavailable")
+            self.assertEqual(export_state(output, self.work, self.authors, "epub")["status"], "unavailable")
         with mock.patch(
             "blue_sora.reader.Path.is_file",
             autospec=True,
-            side_effect=lambda path: str(path).endswith("sample.epub"),
+            side_effect=lambda path: str(path).endswith(epub_name),
         ):
-            self.assertEqual(export_state(output, "sample", "epub")["status"], "available")
+            self.assertEqual(export_state(output, self.work, self.authors, "epub")["status"], "available")
         with mock.patch(
             "blue_sora.reader.Path.is_file",
             autospec=True,
-            side_effect=lambda path: str(path).endswith("sample.pdf.error.txt"),
+            side_effect=lambda path: str(path).endswith(f"{pdf_name}.error.txt"),
         ):
-            self.assertEqual(export_state(output, "sample", "pdf")["status"], "error")
+            self.assertEqual(export_state(output, self.work, self.authors, "pdf")["status"], "error")
+
+    def test_export_filename_is_descriptive_and_safe(self) -> None:
+        self.assertEqual(export_filename(self.work, self.authors, "epub"), "著者-青空：第一部-aozora-000001.epub")
+        unsafe = {**self.work, "title": {"display": "A/B", "reading": "", "subtitle": None}}
+        self.assertEqual(export_filename(unsafe, self.authors, "pdf"), "著者-A-B-aozora-000001.pdf")
 
 
 if __name__ == "__main__":

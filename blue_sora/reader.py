@@ -143,12 +143,34 @@ def render_blocks(
     return RenderedSection(Markup("\n".join(lines)), toc)
 
 
-def export_state(output_dir: Path, slug: str, export_format: str, url_prefix: str = "") -> dict[str, str]:
+_FILENAME_UNSAFE_RE = re.compile(r'[<>:"/\\|?*\x00-\x1f]+')
+
+
+def export_filename(work: dict[str, Any], authors: list[dict[str, Any]], export_format: str) -> str:
+    """Return a descriptive, cross-platform-safe download filename."""
+    author_names = "-".join(author["name"]["display"] for author in authors) or "unknown-author"
+    title = work["title"]["display"] or "untitled"
+    safe_parts = [
+        _FILENAME_UNSAFE_RE.sub("-", value).strip(" .-") or fallback
+        for value, fallback in ((author_names, "unknown-author"), (title, "untitled"))
+    ]
+    code = work.get("aozora_work_id") or work["id"].rsplit(":", 1)[-1]
+    return f"{safe_parts[0]}-{safe_parts[1]}-aozora-{code}.{export_format.lower()}"
+
+
+def export_state(
+    output_dir: Path,
+    work: dict[str, Any],
+    authors: list[dict[str, Any]],
+    export_format: str,
+    url_prefix: str = "",
+) -> dict[str, str]:
     extension = export_format.lower()
     label = export_format.upper()
-    relative = Path("downloads") / f"{slug}.{extension}"
+    filename = export_filename(work, authors, extension)
+    relative = Path("downloads") / filename
     artifact = output_dir / relative
-    error_marker = output_dir / "downloads" / f"{slug}.{extension}.error.txt"
+    error_marker = output_dir / "downloads" / f"{filename}.error.txt"
     if artifact.is_file():
         return {
             "format": label,

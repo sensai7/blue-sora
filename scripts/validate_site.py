@@ -14,6 +14,7 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from blue_sora.site_validation import audit_html, contrast_ratio
+from blue_sora.reader import export_filename
 
 
 FINGERPRINT_RE = re.compile(r"\.[0-9a-f]{12}\.(?:css|js|svg|json)$")
@@ -33,6 +34,7 @@ def resolve_local_url(site: Path, page: Path, url: str) -> Path:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--catalog", type=Path, default=Path("build/catalog"))
     parser.add_argument("--site", type=Path, default=Path("build/site"))
     return parser.parse_args()
 
@@ -40,6 +42,10 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     manifest = json.loads((args.site / "site-manifest.json").read_text(encoding="utf-8"))
+    catalog = json.loads((args.catalog / "indexes" / "catalog.json").read_text(encoding="utf-8"))
+    author_index = json.loads((args.catalog / "indexes" / "authors.json").read_text(encoding="utf-8"))
+    authors = {author["id"]: author for author in author_index["authors"]}
+    works = {work["slug"]: work for work in catalog["works"]}
     html_paths = sorted(args.site.rglob("*.html"))
     if not html_paths:
         raise SystemExit("No generated HTML pages found")
@@ -63,19 +69,22 @@ def main() -> None:
             for required in ('data-reader', 'id="read-here"', 'class="reader-content"', 'Difficulty statistics'):
                 if required not in html:
                     raise SystemExit(f"{path}: missing reader structure: {required}")
-            expected_epub = f'../../downloads/{path.parent.name}.epub'
+            work_id = works[path.parent.name]["id"].rsplit(":", 1)[-1]
+            work = json.loads((args.catalog / "works" / f"{work_id}.json").read_text(encoding="utf-8"))
+            work_authors = [authors[item] for item in work["author_ids"]]
+            expected_epub = f'../../downloads/{export_filename(work, work_authors, "epub")}'
             if f'href="{expected_epub}"' not in html or "Download EPUB" not in html:
                 raise SystemExit(f"{path}: missing EPUB download control: {expected_epub}")
             if not resolve_local_url(args.site, path, expected_epub).is_file():
                 raise SystemExit(f"{path}: EPUB download target is missing: {expected_epub}")
             epub_download_count += 1
-            expected_pdf = f'../../downloads/{path.parent.name}.pdf'
+            expected_pdf = f'../../downloads/{export_filename(work, work_authors, "pdf")}'
             if f'href="{expected_pdf}"' in html:
                 if not resolve_local_url(args.site, path, expected_pdf).is_file():
                     raise SystemExit(f"{path}: PDF download target is missing: {expected_pdf}")
                 pdf_download_count += 1
             else:
-                error_marker = args.site / "downloads" / f"{path.parent.name}.pdf.error.txt"
+                error_marker = args.site / "downloads" / f"{export_filename(work, work_authors, 'pdf')}.error.txt"
                 if "Download PDF" not in html or "PDF generation failed" not in html or not error_marker.is_file():
                     raise SystemExit(f"{path}: missing PDF download control: {expected_pdf}")
         for url in audit.asset_urls:

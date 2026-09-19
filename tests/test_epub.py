@@ -100,6 +100,7 @@ class EpubTests(unittest.TestCase):
         self.assertEqual(first["generated"], 1)
         self.assertEqual(second["unchanged"], 1)
         self.assertEqual(second["failed"], 0)
+        self.assertTrue((output / "downloads" / "著者-青空-aozora-000001.epub").is_file())
 
 
 if __name__ == "__main__":

@@ -36,6 +36,8 @@ from reportlab.platypus import (
     Flowable,
 )
 
+from .reader import export_filename
+
 from blue_sora.ingestion import canonical_text
 
 
@@ -758,7 +760,7 @@ def build_pdfs(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
         raw_id = catalog_work["id"].rsplit(":", 1)[-1]
         work = json.loads((catalog_dir / "works" / f"{raw_id}.json").read_text(encoding="utf-8"))
         work_authors = [authors[author_id] for author_id in work["author_ids"]]
-        filename = f'{work["slug"]}.pdf'
+        filename = export_filename(work, work_authors, "pdf")
         expected.add(filename)
         destination = download_dir / filename
         error_marker = download_dir / f"{filename}.error.txt"

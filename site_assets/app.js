@@ -160,7 +160,7 @@
     const score = document.createElement("p");
     score.className = work.difficulty === null ? "difficulty difficulty--unscored" : "difficulty";
     score.append(textElement("span", "", "Difficulty"));
-    score.append(textElement("strong", "", work.difficulty === null ? "Review" : Math.round(work.difficulty).toString()));
+    score.append(textElement("strong", "", work.difficulty === null ? "Not available" : Math.round(work.difficulty).toString()));
     copy.append(score);
     card.append(cover, copy);
     return card;

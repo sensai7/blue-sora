@@ -9,7 +9,7 @@
     {% if work.difficulty.average_difficulty is not none %}
       <p class="difficulty"><span>Difficulty</span><strong>{{ "%.0f" | format(work.difficulty.average_difficulty) }}</strong></p>
     {% else %}
-      <p class="difficulty difficulty--unscored"><span>Difficulty</span><strong>Review</strong></p>
+      <p class="difficulty difficulty--unscored"><span>Difficulty</span><strong>Unavailable</strong></p>
     {% endif %}
   </div>
 </article>

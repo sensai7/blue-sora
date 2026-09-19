@@ -8,733 +8,733 @@
   },
   "generator_version": "blue-sora-pdf-v3",
   "outputs": {
-    "aozora-000387.pdf": {
-      "fingerprint": "3effc7e2f166afb14bc96891eb4c2423c9af819e0227ace9fcf2d6e0ebb55722",
-      "fonts": 186,
-      "images": 0,
-      "pages": 31,
-      "sha256": "a376abbda268b65659c69befb4ca3b0b6fa2dd0687ee4b9023ed18c2ead8b82f"
-    },
-    "aozora-000389.pdf": {
-      "fingerprint": "e55d3f5d9d9a37e908612dba1efd7de54422d0b324a286f7ddd6be1d17e7a017",
-      "fonts": 343,
-      "images": 2,
-      "pages": 49,
-      "sha256": "d3bd5f76f652aa27a69dd75a47ac9193a561835ce413ce87a837162757d23e02"
-    },
-    "aozora-000391.pdf": {
-      "fingerprint": "f430e9bc0e56f69e026b4018346227cde8436435d0712c31bcf2378e4f2b1b4c",
-      "fonts": 52,
-      "images": 0,
-      "pages": 13,
-      "sha256": "d15d767d30240ffc2eb9883104c006005881904b048acf0eab1d376e3721b104"
-    },
-    "aozora-000392.pdf": {
-      "fingerprint": "f68d9bb93632893aee8f7fd3eeca8a94ac5ab168adb0c97d21a000ccbc9d4054",
-      "fonts": 64,
-      "images": 1,
-      "pages": 16,
-      "sha256": "c7572f2e8e49d42fd6352f8ddc27c0c86cf9fcaec416305f75d18656e03584ac"
-    },
-    "aozora-001043.pdf": {
-      "fingerprint": "94691c33d27d2268cad70ebfbb7f29c4bda353e026223aa211cfede48c7164e8",
-      "fonts": 8,
-      "images": 0,
-      "pages": 4,
-      "sha256": "5643334d18caba95f0646fc407876799409e4ddc21160f03e96064ab915129a2"
-    },
-    "aozora-001857.pdf": {
-      "fingerprint": "ac716a4935d61424d9bcd8d80561403e8572705ea07d6ddf8c9b38435c4e2726",
-      "fonts": 10,
-      "images": 0,
-      "pages": 5,
-      "sha256": "dfba8d3db331a0e7fa8e25f1b8bab6913ad87c60cc3fb76fba87d73d67a9ab15"
-    },
-    "aozora-001864.pdf": {
-      "fingerprint": "9895b3c38d682e201ad67cce52eeaebce28ded97c251becbd71a15b61b2dda8c",
-      "fonts": 4356,
-      "images": 5,
-      "pages": 396,
-      "sha256": "621e2c56e180153f47d4f26c63126ded4121cf1bf9570944cca8ecae11938ab0"
-    },
-    "aozora-004095.pdf": {
+    "樋口一葉-あきあはせ-aozora-004095.pdf": {
       "fingerprint": "7c5a626dcfc0a235150a0bf7f6409dee3e86b3016d6f90c749ec26576ef55a38",
       "fonts": 24,
       "images": 0,
       "pages": 8,
       "sha256": "a91c8f0618ae72e5390ec270ea3995ef5da270a5b0b77408cd309e25c5ac9da4"
     },
-    "aozora-004096.pdf": {
-      "fingerprint": "28086477c4ab891fd77b522588417efcc107d09e4bf288fa9edcaf64c4fe1721",
-      "fonts": 10,
-      "images": 0,
-      "pages": 5,
-      "sha256": "c9cb189c592771742b036f2f1771eab861b31213e7c1f4475ff7724f68a99ef2"
-    },
-    "aozora-004379.pdf": {
-      "fingerprint": "a3f9e91b87984003591756b3292486089d9139e4a0cf189d1ffa9583d0da5348",
-      "fonts": 10,
-      "images": 2,
-      "pages": 5,
-      "sha256": "e76b12a37b16fd1d990a54414ba3af903ae095dfebf38f73f9852e9433088ba6"
-    },
-    "aozora-004380.pdf": {
-      "fingerprint": "9c9c31af1b561f9685d043384a9c1d67731f86b881b17df38e1ade5c440d5333",
-      "fonts": 33,
-      "images": 0,
-      "pages": 11,
-      "sha256": "8e7aaf5ce01689ef5797f66204c4b03fac52bc8f375ead2a00df57db37819d2d"
-    },
-    "aozora-004527.pdf": {
-      "fingerprint": "a17f410f3fb539e06e1d74d73b271cd71c63a929dc6c121bcb4f2652c92e6e7d",
-      "fonts": 30,
-      "images": 0,
-      "pages": 10,
-      "sha256": "0515b18cfdcdcd0fb758b3df2d24cbdb6f332688abf002648d5eb6be35462f72"
-    },
-    "aozora-004528.pdf": {
-      "fingerprint": "7969a40749ecd40648a0ef5d346dbf2ad304e1386ffb9244e8b8a55b6bf1cb71",
-      "fonts": 24,
-      "images": 0,
-      "pages": 8,
-      "sha256": "b223a136c782f54b8d293f502b9324b96b0b753272c47ee385740421876fbf1d"
-    },
-    "aozora-004529.pdf": {
-      "fingerprint": "945b85d4c5c415419be3803268643d58a01035937e7399daa1fe3c39c0d072da",
-      "fonts": 24,
-      "images": 1,
-      "pages": 8,
-      "sha256": "d554648402694a49bca85d9b9c4ffbd938695691124711a5dff70cfe02f6bf16"
-    },
-    "aozora-043029.pdf": {
-      "fingerprint": "634da51baaaca59169c48be19005238119fadd0bb7821b517a8e20433de3cafd",
-      "fonts": 315,
-      "images": 6,
-      "pages": 45,
-      "sha256": "ecd4e736bdd227ea20ad8d5f651a46ca4413e3c3bde99d4c49ec3afe4ea24cad"
-    },
-    "aozora-043064.pdf": {
-      "fingerprint": "3c9b8b6eac22f0a7b58267b7b4d1fd32e85b6ef2207cbe783525e0d9130d6866",
-      "fonts": 168,
-      "images": 0,
-      "pages": 28,
-      "sha256": "2801bea4eb3ef5ab2b830107c6e5b1cf9e460574443d52e1b913e91e3f842959"
-    },
-    "aozora-046685.pdf": {
-      "fingerprint": "0523e6bdd7d6fd8b86addda290fc6366339ebee04ec0560306a0af4c3c682fa9",
-      "fonts": 27,
-      "images": 0,
-      "pages": 9,
-      "sha256": "5d3facd88b083625f8e61aa81af590f8f4d2c3d582bdaa97542b0b58c726722c"
-    },
-    "aozora-046686.pdf": {
-      "fingerprint": "6adf21e38d35012195bb43784499b2a4d498f439e0d1d3b2f025effaf85985dc",
-      "fonts": 21,
-      "images": 0,
-      "pages": 7,
-      "sha256": "8adacfca5abbdb26b197dfe3b32918ca996d2876bf88a549c945a875b42eeb97"
-    },
-    "aozora-046734.pdf": {
-      "fingerprint": "54e6bcddce9e3dfd41dc0ff139ef196becee13148589916befee45bb1e3e46ea",
-      "fonts": 36,
-      "images": 0,
-      "pages": 12,
-      "sha256": "f3c2882e88941c630b34e6b0506338346773c8f83fcdb6900eed9672e8f33c01"
-    },
-    "aozora-046827.pdf": {
-      "fingerprint": "9a9ba6cd9f87f8b5b9ff42adf9f6607cf5c8aa2bf06496cca7acb30025b9feb1",
-      "fonts": 12,
-      "images": 0,
-      "pages": 6,
-      "sha256": "cb51b94ff3bc1f453094be2ae8cb6506aeaeb3e2acb9eba49abede40ffbfdead"
-    },
-    "aozora-046848.pdf": {
-      "fingerprint": "02a71163300195d0078e6f8e8cdb1cb9b1e97a69089e6b58bb3217b0d879f115",
-      "fonts": 33,
-      "images": 2,
-      "pages": 11,
-      "sha256": "d563f094a1d407ed40c7ddc7f4dff4f40aad2e45f1c23fa20407ba4c18c72df9"
-    },
-    "aozora-046890.pdf": {
-      "fingerprint": "6dade453c1ceab6b4e1aaf0d4491886820e6c4085a56be56ed07f64c9b098693",
-      "fonts": 27,
-      "images": 0,
-      "pages": 9,
-      "sha256": "884c0c0af2e2ed39cfc472bc56e97e4389c2e50e2e15adc86ccabc39fe779af5"
-    },
-    "aozora-047030.pdf": {
-      "fingerprint": "2e669a9ed3c2678bbc5a49a6fde38de435cc89ecc068273e73804fae98a0ccf5",
-      "fonts": 72,
-      "images": 1,
-      "pages": 18,
-      "sha256": "7a992c91dca63a8c32cdf650088fa6107f0cc999d6624a230acba67662b6f359"
-    },
-    "aozora-047054.pdf": {
-      "fingerprint": "4de77a11c29097fb294dcfce1fdffd22564adc8a845eb30537745ee39c00a64c",
-      "fonts": 92,
-      "images": 0,
-      "pages": 23,
-      "sha256": "590b2e95f1576214d2015ea3fa2e4d189d8bca7531ab727fe3c47eaa0dce720e"
-    },
-    "aozora-047149.pdf": {
-      "fingerprint": "3a03ba7e11be7634909adf6fbc86f1f605a5d77ebf59ead49c28d8615e1dce77",
-      "fonts": 56,
-      "images": 0,
-      "pages": 14,
-      "sha256": "86a95df2a34d1c8be074c6f15d025f3eebd8a2293c9d3ebda7a629bf6bab5390"
-    },
-    "aozora-047150.pdf": {
-      "fingerprint": "4e780f5d508caee1139526f46e9766b084eaecce1c3661ef0a40afa6f8cfc75f",
-      "fonts": 12,
-      "images": 0,
-      "pages": 6,
-      "sha256": "3177b59de453aa0b5390964a398867384214bdac94a622f66f047663c6a8217c"
-    },
-    "aozora-047152.pdf": {
-      "fingerprint": "b283f39ad673d096cd9eb2d84d53ba55077ad033e4b9575af77f3c216bc6364e",
-      "fonts": 10,
-      "images": 0,
-      "pages": 5,
-      "sha256": "97e723f52249b934afd10dfcf4d626af8db498510dfc0a5f399d2336857c6797"
-    },
-    "aozora-047219.pdf": {
-      "fingerprint": "9f587ceda6a9a65aaa79d2132130b947729d1122682b5cf77282f88455c7e26a",
-      "fonts": 21,
-      "images": 0,
-      "pages": 7,
-      "sha256": "ab17c4a5072c5ee440673dd11b4bb0c5711872a33c84344657a255260949c504"
-    },
-    "aozora-047293.pdf": {
-      "fingerprint": "15e686ce1de9377584c9413ec16fea3f9d1160edb6e577fb0e2a91db390e7f75",
-      "fonts": 228,
-      "images": 0,
-      "pages": 38,
-      "sha256": "daa20275ff31e95e6f3218c63154a54c5e994253e589623919a59a29d7d8eb28"
-    },
-    "aozora-047295.pdf": {
-      "fingerprint": "f0f4173e6a8047a45343a6dfa6ceb5f9abbf632752f6d4129e97ed016e416533",
-      "fonts": 24,
-      "images": 0,
-      "pages": 8,
-      "sha256": "30089c48e8e1546b7a84b4a1a898d4b08f8556a1577bde17067c101e7468fa57"
-    },
-    "aozora-047343.pdf": {
-      "fingerprint": "d23f435dbbd8aa80924c07e01cf036591d21cb2a095d91f877b3bd4ac70bc570",
-      "fonts": 21,
-      "images": 1,
-      "pages": 7,
-      "sha256": "b13f67fb843182cd17e8c4a830e7b83b423df4b9c52bc931dd52acfcb46aeb8c"
-    },
-    "aozora-047353.pdf": {
-      "fingerprint": "eea3afd28c5ae86c1ad7df310c2501a4088e954d66a03f5ad861defbbbf91606",
-      "fonts": 56,
-      "images": 3,
-      "pages": 14,
-      "sha256": "ff55dd56ee594283e84d292b044efed370c5f7e1602c442fbabe714b8596725f"
-    },
-    "aozora-049279.pdf": {
-      "fingerprint": "9900867ecf00f41f132aad0cbaac99f40b1b4d0486b93708ebec9a6140738cfb",
-      "fonts": 48,
-      "images": 0,
-      "pages": 12,
-      "sha256": "ca0c3abb28c163c34590307590e4ee6e06b25bc0c3d07a4b0c4a0d65fa0c846b"
-    },
-    "aozora-049756.pdf": {
-      "fingerprint": "d6043fccbe421cda415e39b9d5785546dca06f171ca96ad632374f66dfe5e897",
-      "fonts": 27,
-      "images": 0,
-      "pages": 9,
-      "sha256": "dfea85863cc9981450c185338a398472860076ed1c6594d79a1db1b8d266eac9"
-    },
-    "aozora-049757.pdf": {
-      "fingerprint": "729c45bff74c68161f50a82150993d7fb86ce56e305e8f47bccf1e0ace36f1ce",
-      "fonts": 24,
-      "images": 0,
-      "pages": 8,
-      "sha256": "45683b436aa9c02b96412495e3995cb437d0d3d1bbc473ae31e690714f98136a"
-    },
-    "aozora-049778.pdf": {
-      "fingerprint": "a52a058309a6f4818d48d552fdd052f4676d055acc7eaf26aa3c5d0bc63fa8b1",
-      "fonts": 48,
-      "images": 0,
-      "pages": 12,
-      "sha256": "59290a8bb5469f7a1056d2be6341b0d156656a9f7aa16d6264f9ea307fd25b22"
-    },
-    "aozora-049832.pdf": {
-      "fingerprint": "897bd33012cc6a11813a2f61b51da40eae499b9f6caa8e2ec460812d673da8e7",
-      "fonts": 24,
-      "images": 2,
-      "pages": 8,
-      "sha256": "3f248d2198368c0a8d2a259501661b2097d27bcf07cf0a09f0b580546ec8d4e3"
-    },
-    "aozora-050273.pdf": {
-      "fingerprint": "01d1c7b2229abfc69c20b28496ccdf8e88357a8eceadce308a339205adae8de3",
-      "fonts": 27,
-      "images": 0,
-      "pages": 9,
-      "sha256": "d61a47aaabf338da893f8b394e61a1df1b61b7881e5148ec04fe5753a268be22"
-    },
-    "aozora-050298.pdf": {
-      "fingerprint": "e084e3170d4152767d46ef760477b3b50bcd498216a06ea73a76d09be04d1cf2",
-      "fonts": 24,
-      "images": 0,
-      "pages": 8,
-      "sha256": "931e154523372690e11cef8d2d19b2c9a702c0eace3ad61fc23ff3c543b2c3da"
-    },
-    "aozora-050307.pdf": {
-      "fingerprint": "fb0ed4ffb14ceb5999916f7115e651a6fd01b3054056e658bef0ea295fe3b0ce",
-      "fonts": 24,
-      "images": 0,
-      "pages": 8,
-      "sha256": "1d72847958dd7aee994a9918d5a5f1131525d9b262820424349cd7fa4c6c3f05"
-    },
-    "aozora-050545.pdf": {
-      "fingerprint": "ed45291b3fb9520817b06fa78042b79f931400b7fc1d4b1c9916709d33118f6c",
-      "fonts": 60,
-      "images": 0,
-      "pages": 15,
-      "sha256": "03261fffbf0e8100aa2b5ed0905305eae6fba5c71199b58c685a8d205a0613f4"
-    },
-    "aozora-050553.pdf": {
-      "fingerprint": "4b4c3d3b4e03dd4e2ab73039f32c2537874f7516e69f5e9650a7653ef69a09e9",
-      "fonts": 24,
-      "images": 0,
-      "pages": 8,
-      "sha256": "8d3e388f1b3caef049f1cd845522ca87a4db30cb2f5bcaf107fa96a5ee87c15d"
-    },
-    "aozora-054836.pdf": {
-      "fingerprint": "544d527601bd3f8ae1e6c67fe6053e6f2232c2bc583ee3f5493d6fc4de0ef528",
-      "fonts": 36,
-      "images": 0,
-      "pages": 12,
-      "sha256": "ea6156290962b0851bb4d3dfa1638f6a1ebe7832bfae836be558b8d38d6f5b92"
-    },
-    "aozora-055661.pdf": {
-      "fingerprint": "245ba9a27ac6441d01833baf304755a9a3940cd73a0292593ab5ce560386fcc1",
-      "fonts": 60,
-      "images": 14,
-      "pages": 15,
-      "sha256": "2a820a1143129565160a14bce936adf883bc5a6e8f60048fd8068689d510e1c9"
-    },
-    "aozora-055663.pdf": {
-      "fingerprint": "a97bacd25ad2881e9db5928223e75c94d4b9467ade87c362cbf6d609e897205c",
-      "fonts": 130,
-      "images": 1,
-      "pages": 26,
-      "sha256": "eaa88341b86f718466f5aa93db8fe5376f047aa93dcfb93a854594f63daaa14d"
-    },
-    "aozora-055667.pdf": {
-      "fingerprint": "5e0a96d58a98e004d0ccbd95e13f57269063129b690ca6b946b399782afdac70",
-      "fonts": 24,
-      "images": 0,
-      "pages": 8,
-      "sha256": "7e6a0e232079a68faad3761f854d71b1037514032385339d6103a9a6d3b66498"
-    },
-    "aozora-055669.pdf": {
-      "fingerprint": "0e4450f59a7c53e52cf44eae767281d93b97bb88667947f9800694d73bee1ae5",
-      "fonts": 48,
-      "images": 0,
-      "pages": 12,
-      "sha256": "1fb3350e1970b2b44ed76c117a85b224f75ebfdf8af04bae17eb549cfabc404e"
-    },
-    "aozora-055670.pdf": {
-      "fingerprint": "10af418e82faa0ac8a63960401414fc516d605c411ae738afae954e0e0f93ef1",
-      "fonts": 110,
-      "images": 6,
-      "pages": 22,
-      "sha256": "4ed5ed69caa351e3535b89fe82a4bd9fa2c296e7df3420f577e490b2df1e8b22"
-    },
-    "aozora-055672.pdf": {
-      "fingerprint": "8533907edfbe957b3de99aef2b70f16ffa40ea4cdb58598cd2a2797521a2af69",
-      "fonts": 216,
-      "images": 16,
-      "pages": 36,
-      "sha256": "86611f7769d88121be8197560818a1d9ca254837213f0c02282beb9685d18377"
-    },
-    "aozora-056007.pdf": {
+    "樋口一葉-うつせみ-aozora-056007.pdf": {
       "fingerprint": "26aab90cc9bda30490b8039bf95bfdd23b286144f81d830158f41df1856437b5",
       "fonts": 68,
       "images": 0,
       "pages": 17,
       "sha256": "cafcfeb9f1373471705f8a70a2eddffe447e15bb7673cd13f0213fd9189fb8ff"
     },
-    "aozora-056008.pdf": {
-      "fingerprint": "572a77f0e203c7f0c5728c1a1de79d65a3b00211dccc07b772ecc4b9107b2504",
-      "fonts": 60,
-      "images": 0,
-      "pages": 15,
-      "sha256": "3611b3836bb2e9528e66f67b6f52dfb473666b40201bc4f30c74c9b473bfed91"
-    },
-    "aozora-056009.pdf": {
-      "fingerprint": "5b61da006058194af3f1245a7fe34221dda05fc4533cbe4b5c9f92755eb1fc1a",
+    "樋口一葉-うらむらさき-aozora-055667.pdf": {
+      "fingerprint": "5e0a96d58a98e004d0ccbd95e13f57269063129b690ca6b946b399782afdac70",
       "fonts": 24,
-      "images": 4,
+      "images": 0,
       "pages": 8,
-      "sha256": "94f989d6aad4332670d987caba328707b1ab7a81a76b8485d546f45659aca216"
+      "sha256": "7e6a0e232079a68faad3761f854d71b1037514032385339d6103a9a6d3b66498"
     },
-    "aozora-056042.pdf": {
+    "樋口一葉-この子-aozora-055669.pdf": {
+      "fingerprint": "0e4450f59a7c53e52cf44eae767281d93b97bb88667947f9800694d73bee1ae5",
+      "fonts": 48,
+      "images": 0,
+      "pages": 12,
+      "sha256": "1fb3350e1970b2b44ed76c117a85b224f75ebfdf8af04bae17eb549cfabc404e"
+    },
+    "樋口一葉-さをのしづく-aozora-004380.pdf": {
+      "fingerprint": "9c9c31af1b561f9685d043384a9c1d67731f86b881b17df38e1ade5c440d5333",
+      "fonts": 33,
+      "images": 0,
+      "pages": 11,
+      "sha256": "8e7aaf5ce01689ef5797f66204c4b03fac52bc8f375ead2a00df57db37819d2d"
+    },
+    "樋口一葉-すゞろごと-aozora-004096.pdf": {
+      "fingerprint": "28086477c4ab891fd77b522588417efcc107d09e4bf288fa9edcaf64c4fe1721",
+      "fonts": 10,
+      "images": 0,
+      "pages": 5,
+      "sha256": "c9cb189c592771742b036f2f1771eab861b31213e7c1f4475ff7724f68a99ef2"
+    },
+    "樋口一葉-たけくらべ-aozora-000389.pdf": {
+      "fingerprint": "e55d3f5d9d9a37e908612dba1efd7de54422d0b324a286f7ddd6be1d17e7a017",
+      "fonts": 343,
+      "images": 2,
+      "pages": 49,
+      "sha256": "be38cfa7781ef07bdfaffd071ff328ab4e27f214ff7e604b1dccdb01cac06b0b"
+    },
+    "樋口一葉-にごりえ-aozora-000387.pdf": {
+      "fingerprint": "3effc7e2f166afb14bc96891eb4c2423c9af819e0227ace9fcf2d6e0ebb55722",
+      "fonts": 186,
+      "images": 0,
+      "pages": 31,
+      "sha256": "a376abbda268b65659c69befb4ca3b0b6fa2dd0687ee4b9023ed18c2ead8b82f"
+    },
+    "樋口一葉-にごりえ-aozora-055672.pdf": {
+      "fingerprint": "8533907edfbe957b3de99aef2b70f16ffa40ea4cdb58598cd2a2797521a2af69",
+      "fonts": 216,
+      "images": 16,
+      "pages": 36,
+      "sha256": "b34baf56f70fa92e99f37e1604fc0cdeaddebde174ff73ff62d71820f1e72a06"
+    },
+    "樋口一葉-にごりえ-aozora-056042.pdf": {
       "fingerprint": "284f819cd18d1da9b1c9dc9effe1d4c7e619c91445d23895c70f6e400550e893",
       "fonts": 210,
       "images": 0,
       "pages": 35,
       "sha256": "c42ca83bef522553a7f931dcd73f4ad1cf56c65091c1104f7db11765453ae485"
     },
-    "aozora-056645.pdf": {
-      "fingerprint": "dca3ab0fe730cd8b6955b0b75c5017a6b43e3f41a368d11bd7c9fca71f7d9a42",
-      "fonts": 150,
-      "images": 0,
-      "pages": 30,
-      "sha256": "b17f7ac0bf6e7078f71e452c8565009d05e83a008a426c6244ba4d6989251eac"
-    },
-    "aozora-056646.pdf": {
-      "fingerprint": "4dfc9a62a3e6ff6d4db236057a13c1cdbf97b672fb365bae2ba290ffb6f206be",
-      "fonts": 200,
+    "樋口一葉-ゆく雲-aozora-000392.pdf": {
+      "fingerprint": "f68d9bb93632893aee8f7fd3eeca8a94ac5ab168adb0c97d21a000ccbc9d4054",
+      "fonts": 64,
       "images": 1,
-      "pages": 40,
-      "sha256": "752b6806261e41f6c690315754bf051cfc0faca14f53f180affb676471f8c0c9"
+      "pages": 16,
+      "sha256": "0b095ac42c82cf895f0855f77d6141c0425ea8b737ad0361464b10f1153bb4a5"
     },
-    "aozora-056647.pdf": {
-      "fingerprint": "7e10f9e1759fa833e3291df36f88b8ec7a5a280086b684807dc5596ae35af157",
-      "fonts": 160,
-      "images": 1,
-      "pages": 32,
-      "sha256": "4265434cfd3e000d71d33306e8df69e14eaa7e79a49967ec9de201259853a680"
-    },
-    "aozora-056649.pdf": {
-      "fingerprint": "fc98f72fc6edef98b12f61237e4c50c100bbae05e023de9d108eaa4f797835e1",
-      "fonts": 294,
-      "images": 4,
-      "pages": 49,
-      "sha256": "203247890eeb1534fa28b330422b9e14d9669896ba99d5ac1ff6fa023029f44f"
-    },
-    "aozora-056650.pdf": {
-      "fingerprint": "1d8bde9cf55e89f0925346b5818e212c617bedf8c59238dc69c95b862cf1f993",
-      "fonts": 190,
+    "樋口一葉-わかれ道-aozora-000391.pdf": {
+      "fingerprint": "f430e9bc0e56f69e026b4018346227cde8436435d0712c31bcf2378e4f2b1b4c",
+      "fonts": 52,
       "images": 0,
-      "pages": 38,
-      "sha256": "a35699d2f7e5d8436eb37d0994f1651108a417351d981b1df43a38b2c542cc3c"
+      "pages": 13,
+      "sha256": "d15d767d30240ffc2eb9883104c006005881904b048acf0eab1d376e3721b104"
     },
-    "aozora-056669.pdf": {
-      "fingerprint": "ec1c107550a9659c1a368dce768a5cb5b51d578411fba7f11c0e33e20db33897",
-      "fonts": 940,
+    "樋口一葉-わかれ道-aozora-056008.pdf": {
+      "fingerprint": "572a77f0e203c7f0c5728c1a1de79d65a3b00211dccc07b772ecc4b9107b2504",
+      "fonts": 60,
       "images": 0,
-      "pages": 188,
-      "sha256": "d034a8cd7e4e7825cc4ffc3cd46415780e77027141b0754326cb5bc8ba42ff9a"
+      "pages": 15,
+      "sha256": "3611b3836bb2e9528e66f67b6f52dfb473666b40201bc4f30c74c9b473bfed91"
     },
-    "aozora-056670.pdf": {
-      "fingerprint": "4ad0bb8df6727dc7f50808a7b6fb26222cd9b69beb8f8e8f832932a243afe40a",
-      "fonts": 1125,
-      "images": 0,
-      "pages": 225,
-      "sha256": "f6c51945957f7091e36e5317c09d6f5c2cab86126d40000f3bef7aada08f8140"
-    },
-    "aozora-056671.pdf": {
-      "fingerprint": "fdb5c361c3527089aabb7778c19454e9238cc1df5b30c04ffbca4c9cbe3c2a77",
-      "fonts": 750,
-      "images": 0,
-      "pages": 150,
-      "sha256": "6a2c22a78170b3ab9deb9b0dc29daf783c196cb38cdafd21d389500c46916350"
-    },
-    "aozora-056672.pdf": {
-      "fingerprint": "0f4e5a1c15988f248e5d00de693f4699eda81df7a766f5e8c6d4a128bdb4c7b5",
-      "fonts": 692,
-      "images": 0,
-      "pages": 173,
-      "sha256": "dd5869b60d5194d7685a670868ec380eca1340e7a14f5694c443f2b96d16cf27"
-    },
-    "aozora-056673.pdf": {
-      "fingerprint": "3712695e22d306d09ed010cb2466c22fb8302db5a424f85e7b5a206ed86d9dc4",
-      "fonts": 688,
-      "images": 7,
-      "pages": 172,
-      "sha256": "4084ca635639a47fb81a93555999081b6f260d9345c54061701b8f95cec34f92"
-    },
-    "aozora-056674.pdf": {
-      "fingerprint": "b5b3fb27b5899150422524b3e614da2d8b346aa71a67dbbebf302fa6d9f7d98b",
-      "fonts": 656,
-      "images": 0,
-      "pages": 164,
-      "sha256": "78960c537110d17cf7e8223acd097f67e73c31feb25e4fae1e73792e960d198c"
-    },
-    "aozora-056675.pdf": {
-      "fingerprint": "31012cf08ca42fcaa09878de5dd5992203d8d81a4fda114682c0f9bf983b6b40",
-      "fonts": 608,
-      "images": 0,
-      "pages": 152,
-      "sha256": "a305142d46a99f42534610c7382902e4ad265f649dc69371b2034caa4d4ed0f6"
-    },
-    "aozora-056676.pdf": {
-      "fingerprint": "a8a12068aa340f335b4fd7e4485ed245dde6568d512dd17c2e760f6a19d93b20",
-      "fonts": 584,
-      "images": 0,
-      "pages": 146,
-      "sha256": "b9c582054b6fd02ce1a07dec0602aeb41265708d6343225c60681f38f8744409"
-    },
-    "aozora-056677.pdf": {
-      "fingerprint": "1f0a203b93eab2e74d95c05d92e11317e680847083ba1033a64ae901fcff02f9",
-      "fonts": 564,
-      "images": 0,
-      "pages": 141,
-      "sha256": "24d542402c65de7abb7a6df1c05def281c29a304edbd3e07db3e879ac3129ef8"
-    },
-    "aozora-056678.pdf": {
-      "fingerprint": "d6acdd1ae4b3dec538b65042ed10b6a34e9dffc9710539792037c1c816d09e9e",
-      "fonts": 576,
-      "images": 0,
-      "pages": 144,
-      "sha256": "aa3f2f2cdaa363af48c8615ae62887f86d6e4391886eb924e4b42ae264b4342a"
-    },
-    "aozora-056679.pdf": {
-      "fingerprint": "8cf4e5dd10f65ad4fc28dbd2e20d49f84d9b8d7510060ff5a58725027a8811cb",
-      "fonts": 572,
-      "images": 0,
-      "pages": 143,
-      "sha256": "4a2e6715b5540a26aafbb19c834f130a732b668772c275ebe73c78bf93d97f3b"
-    },
-    "aozora-056680.pdf": {
-      "fingerprint": "2c99697a98d6207e7b5ffd60d2dd6372255998f91bd45fe61f09c3b3b67913a4",
-      "fonts": 580,
-      "images": 0,
-      "pages": 145,
-      "sha256": "0efc294d99368d3f372f3ad80f393475c9fcd8a4caffb60b0ae7854f316eda65"
-    },
-    "aozora-056889.pdf": {
+    "樋口一葉-わかれ道-aozora-056889.pdf": {
       "fingerprint": "140ec1294cbbd161d96a2435ee3499d8848f934c2eda4aa0339f3c7dc232993e",
       "fonts": 60,
       "images": 0,
       "pages": 15,
       "sha256": "e4338d632e31e400539f0586f1a56647d00ae427fc8df4a755215c13a64a958d"
     },
-    "aozora-057105.pdf": {
-      "fingerprint": "77ac7d8115934aae7f3cc8823586d97a819070cefeeb2a74cd799c65eddd8ef6",
-      "fonts": 98,
-      "images": 0,
-      "pages": 49,
-      "sha256": "f631e90269a4972ba845d84c48e1f5376c8bec826e1990aca3dcf60f3b2cb449"
+    "樋口一葉-十三夜-aozora-055670.pdf": {
+      "fingerprint": "10af418e82faa0ac8a63960401414fc516d605c411ae738afae954e0e0f93ef1",
+      "fonts": 110,
+      "images": 6,
+      "pages": 22,
+      "sha256": "30824def52e6049175790505c1e5475fbfdafcde7fc31b8b25ccac494361e781"
     },
-    "aozora-057108.pdf": {
-      "fingerprint": "271861a0f39d0bce1b83070b8b3ad3d43fa39e308ec92b358c1b73914a6e599d",
-      "fonts": 620,
-      "images": 0,
-      "pages": 155,
-      "sha256": "13259151b4cacce9919fe224a07129c271b0ce793b9a1e7a2df8fa39249c92a8"
-    },
-    "aozora-057109.pdf": {
-      "fingerprint": "d1383998c8a7bcff594ba87112c07c1ddfa43e393246656c8e3596ec05f172f7",
-      "fonts": 600,
+    "樋口一葉-反古しらべ-aozora-004379.pdf": {
+      "fingerprint": "a3f9e91b87984003591756b3292486089d9139e4a0cf189d1ffa9583d0da5348",
+      "fonts": 10,
       "images": 2,
-      "pages": 150,
-      "sha256": "510c0bf73101d94e0005b52df2cfe0c25e84f37dac22ed1e5399c8471d06eb1e"
+      "pages": 5,
+      "sha256": "e76b12a37b16fd1d990a54414ba3af903ae095dfebf38f73f9852e9433088ba6"
     },
-    "aozora-057165.pdf": {
-      "fingerprint": "e2ef0f96d374aa34e99579a5171b516cbf86fd527562778f6b15fffe0126e349",
-      "fonts": 28,
+    "樋口一葉-月の夜-aozora-001857.pdf": {
+      "fingerprint": "ac716a4935d61424d9bcd8d80561403e8572705ea07d6ddf8c9b38435c4e2726",
+      "fonts": 10,
       "images": 0,
-      "pages": 14,
-      "sha256": "1335eba716a4ed4b355eddeaf5e60f8d486ba098e2881ceb000c62df887efdcd"
+      "pages": 5,
+      "sha256": "dfba8d3db331a0e7fa8e25f1b8bab6913ad87c60cc3fb76fba87d73d67a9ab15"
     },
-    "aozora-057181.pdf": {
-      "fingerprint": "e4a041273dbaa68d62637e858108ff28a6fb6383c63660bc20efa532ad70eea3",
-      "fonts": 155,
-      "images": 0,
-      "pages": 31,
-      "sha256": "fbb40c1dfb42a6759a43c048f4b4a70eeea894aa8c3afd641aa5d9c002f29c19"
-    },
-    "aozora-057182.pdf": {
-      "fingerprint": "bc6effd9058af24003158b16aab6be71745e452f5c3573357b1eb7fd3d47b6d6",
-      "fonts": 120,
-      "images": 0,
-      "pages": 24,
-      "sha256": "4aacf3ac3704d8792fd07618b87532a652b702c0455eaec18ea9147299244fba"
-    },
-    "aozora-057185.pdf": {
-      "fingerprint": "1436729a615efc708b7ecbc9916fe23d75072d57463b8d292c2d15a84ecd11bd",
-      "fonts": 170,
+    "樋口一葉-琴の音-aozora-004529.pdf": {
+      "fingerprint": "945b85d4c5c415419be3803268643d58a01035937e7399daa1fe3c39c0d072da",
+      "fonts": 24,
       "images": 1,
-      "pages": 34,
-      "sha256": "2d1492d8f7dea9cd57c64cba6317001befcad2350ab9ee45f2e1f5a08c787821"
+      "pages": 8,
+      "sha256": "7ccf2a78767132f406d304287b137497639a6d6dcffe42749eda40d5b16e8244"
     },
-    "aozora-057186.pdf": {
-      "fingerprint": "904e2cdc5498acf3af98335a99b39a55ab91c3f2c478186e2ef720c8009b45a8",
+    "樋口一葉-琴の音-aozora-056009.pdf": {
+      "fingerprint": "5b61da006058194af3f1245a7fe34221dda05fc4533cbe4b5c9f92755eb1fc1a",
+      "fonts": 24,
+      "images": 4,
+      "pages": 8,
+      "sha256": "94f989d6aad4332670d987caba328707b1ab7a81a76b8485d546f45659aca216"
+    },
+    "樋口一葉-経つくゑ-aozora-055661.pdf": {
+      "fingerprint": "245ba9a27ac6441d01833baf304755a9a3940cd73a0292593ab5ce560386fcc1",
       "fonts": 60,
-      "images": 0,
+      "images": 14,
       "pages": 15,
-      "sha256": "13348a987cd01830af41cb6baff9ae02cd50274437f7174844151d24f05bba69"
+      "sha256": "3a1ad3fcd365e94a1bdb2b732386ab5d02f3aa821c555d4e7dac7f620af4b437"
     },
-    "aozora-057187.pdf": {
-      "fingerprint": "4bfa0c736fc3ef0dbe6b3d3f1243253b25c345b1be827bb92eb92985e48c1083",
-      "fonts": 84,
-      "images": 0,
-      "pages": 21,
-      "sha256": "0f661aa3ce93f5c602241b43242571fe320641d37e0333cc43172345a3b212e8"
+    "樋口一葉-花ごもり-aozora-055663.pdf": {
+      "fingerprint": "a97bacd25ad2881e9db5928223e75c94d4b9467ade87c362cbf6d609e897205c",
+      "fonts": 130,
+      "images": 1,
+      "pages": 26,
+      "sha256": "eaa88341b86f718466f5aa93db8fe5376f047aa93dcfb93a854594f63daaa14d"
     },
-    "aozora-057188.pdf": {
-      "fingerprint": "798c8b26b058c76c355c18c74edaec5cdda371b15b34eb1aa1d52d7f85accee0",
-      "fonts": 68,
-      "images": 0,
-      "pages": 17,
-      "sha256": "2b66548e63f5e11c1e1747fecf49d501020cd61f496b688a2ce0e5e8829d5183"
-    },
-    "aozora-057190.pdf": {
-      "fingerprint": "c2d629d01378368212ba1a259101d7d77f82dd24337decdf1bb287300f7df3f8",
-      "fonts": 42,
-      "images": 0,
-      "pages": 14,
-      "sha256": "bcc02858fad3aa3d861a00fcd81c13fecee588e1d7837a40ea3e7a84f7548de4"
-    },
-    "aozora-057191.pdf": {
-      "fingerprint": "de6990dda358b83e7ce4f6cc944e9605386996bef1b552af5c23b631c31a108c",
-      "fonts": 84,
-      "images": 0,
-      "pages": 21,
-      "sha256": "e05ddaf5eb62b817547438d2139f023475aec484b62c22e8e0322b961b1ba0e9"
-    },
-    "aozora-057192.pdf": {
-      "fingerprint": "6640448bea1e296a5f182471f0cbc4d100a79bf8e0bedf8953c62fac3df6459c",
+    "樋口一葉-闇桜-aozora-004527.pdf": {
+      "fingerprint": "a17f410f3fb539e06e1d74d73b271cd71c63a929dc6c121bcb4f2652c92e6e7d",
       "fonts": 30,
       "images": 0,
       "pages": 10,
-      "sha256": "c9dfb05577148bdeb06f1dc8147a578ee3946f44e512fe23d50557388781d2a8"
+      "sha256": "0515b18cfdcdcd0fb758b3df2d24cbdb6f332688abf002648d5eb6be35462f72"
     },
-    "aozora-057193.pdf": {
-      "fingerprint": "bdfff7385277f9ec4408726041a0cd8517d57e91c7bd330dcbc55ab4309c674e",
-      "fonts": 56,
+    "樋口一葉-雨の夜-aozora-001043.pdf": {
+      "fingerprint": "94691c33d27d2268cad70ebfbb7f29c4bda353e026223aa211cfede48c7164e8",
+      "fonts": 8,
       "images": 0,
-      "pages": 14,
-      "sha256": "f0b022ca08ced25cd6b832240ec81e271adccad235e78111d6d22c0941cf2cf4"
+      "pages": 4,
+      "sha256": "5643334d18caba95f0646fc407876799409e4ddc21160f03e96064ab915129a2"
     },
-    "aozora-057194.pdf": {
-      "fingerprint": "0b9bc14555390f8210403a50b3de533a5099022475c242245c5f186eeb3e8e30",
-      "fonts": 76,
-      "images": 0,
-      "pages": 19,
-      "sha256": "2c60e90cfc3a8c331c72fe5a43fd88454a5008a49dace43dc34a8fefcef8fbc0"
-    },
-    "aozora-057195.pdf": {
-      "fingerprint": "fd0ddb5b44330a57156a61fd447080c7a687b3fcb15be6ddc58b6b0b32a43184",
-      "fonts": 110,
-      "images": 0,
-      "pages": 22,
-      "sha256": "74f7fcfb99fbad62c9ff9cb9bd86ae953601a12382c934815d3adac90fe833fc"
-    },
-    "aozora-057196.pdf": {
-      "fingerprint": "119c0e7fdebe69ddd7a48d6d6bb6b0551a439d101f82f1d4b3f7947af00a8c27",
-      "fonts": 92,
-      "images": 0,
-      "pages": 23,
-      "sha256": "bc1132f9d5e9fce7412579b1ac3ac45ad1dad4c247379d7a3e5f528c0a62f41f"
-    },
-    "aozora-057197.pdf": {
-      "fingerprint": "6bb92032563042ad3e484b592c3343d2a12189a80639d32a2fa35213a579cc2c",
-      "fonts": 16,
+    "樋口一葉-雪の日-aozora-004528.pdf": {
+      "fingerprint": "7969a40749ecd40648a0ef5d346dbf2ad304e1386ffb9244e8b8a55b6bf1cb71",
+      "fonts": 24,
       "images": 0,
       "pages": 8,
-      "sha256": "681f955d9ef041a944cedabccf3c016b94bea8924d37e788e2adcb0f13691003"
+      "sha256": "b223a136c782f54b8d293f502b9324b96b0b753272c47ee385740421876fbf1d"
     },
-    "aozora-057225.pdf": {
-      "fingerprint": "954dd0141a1dd2fa2bd60208ed9972737e31485cc953ed7e5114e58f172e0645",
-      "fonts": 225,
-      "images": 0,
-      "pages": 75,
-      "sha256": "5649a809c65175a2aa9ccf1787c4037ee631414eb670b98cef5e291325bae7ce"
-    },
-    "aozora-057226.pdf": {
-      "fingerprint": "ccdc2b571cc7361a986df54e1c164de51926b3f58fabde7a7aa2cff47d06c439",
-      "fonts": 62,
-      "images": 0,
-      "pages": 31,
-      "sha256": "b32a555d7b3683dcaf38b3e24fd29ab7735b05ada862b9d37bd1824c074317a3"
-    },
-    "aozora-057227.pdf": {
-      "fingerprint": "594bad52c1f9b7a24a41a659906df5e8bd7b3a0404ea01905d3eb9077fe1bca2",
-      "fonts": 62,
-      "images": 0,
-      "pages": 31,
-      "sha256": "1ce23dd3b9530f76e1663367bcb6bdcb80e8b77cfc674fd28eee74730d3b43ca"
-    },
-    "aozora-057228.pdf": {
-      "fingerprint": "4170187a82d6a7b662c4c28ceb5c388663ac9c9b33cb31eaf17cb5d683cbd967",
-      "fonts": 1242,
-      "images": 0,
-      "pages": 207,
-      "sha256": "5bfcbc5b742a6be0dab53298f44a9f5024fa56f55acac8e0476228cdbe84cfdb"
-    },
-    "aozora-057229.pdf": {
-      "fingerprint": "364c35b9424c9c910b4b9ae76d64747ba2124e0e914eb63aac425dec42d1bba1",
-      "fonts": 700,
-      "images": 0,
-      "pages": 175,
-      "sha256": "8f6112818e9754344f964aa0502a92a457bbce2b42cd496d555f13949555717f"
-    },
-    "aozora-057230.pdf": {
-      "fingerprint": "3850853f5e947210875dd7c6a9087e27593411446dfdd7d0ed2b06ffa34000dd",
-      "fonts": 303,
-      "images": 0,
-      "pages": 101,
-      "sha256": "93c9f16551f8a3650f3f07a7b1a6e4e8176f772074dcdfc9c538f175836ef6b7"
-    },
-    "aozora-057240.pdf": {
-      "fingerprint": "b01ce44da395d73aec76a8eaf4457d4ba72fe77f181301007c9f572b069477c0",
-      "fonts": 2502,
-      "images": 0,
-      "pages": 278,
-      "sha256": "cf5283631b878237750724bdbff963d79e50e95963b7c0a8a256e9d39edad3e5"
-    },
-    "aozora-057343.pdf": {
-      "fingerprint": "95b6e8ee6ce20ac426dd7a3f9614fa23acf816341426042dfa4ea8f3237430ba",
-      "fonts": 100,
-      "images": 0,
-      "pages": 25,
-      "sha256": "37336c3f6ae1c43c0d9c1d924186a90300d3e4e82d8589d77a0f7ef992e7833c"
-    },
-    "aozora-057405.pdf": {
-      "fingerprint": "a21cf07d22a839f14ac4803ac87323c48ab390af6d9603b05b1634146ffd1ec6",
-      "fonts": 1640,
-      "images": 0,
-      "pages": 205,
-      "sha256": "db48c281f2e98b35fbe412efb95b4ff4a4de653a0d76b02989106359b370e790"
-    },
-    "aozora-057414.pdf": {
-      "fingerprint": "936569340214272b4cb2f2c9039efc148ba1a2d283147d91170621701e20fcc2",
-      "fonts": 27,
-      "images": 0,
-      "pages": 9,
-      "sha256": "0e7427471ea616eb591b91fe7e4f9c829ebd7e80bf91893f5b1659857916e5c5"
-    },
-    "aozora-057502.pdf": {
-      "fingerprint": "e448497ffb1c3c078c959046768d3d0f5c16bd95dc749ca0e6f72bb7af1fa81b",
-      "fonts": 2025,
-      "images": 131,
-      "pages": 225,
-      "sha256": "6d53dc66b45968b2769b8411edaf30de6e67c54dddc9783937d8b863a93212e4"
-    },
-    "aozora-057504.pdf": {
+    "江戸川乱歩-お勢登場-aozora-057504.pdf": {
       "fingerprint": "d12ab693de43b613fa53057aa1a8bff7c5f72277a0c77fcbd0e33897638ceddb",
       "fonts": 120,
       "images": 0,
       "pages": 24,
       "sha256": "c58deea1056674470694fcfbd0682eb3dfe07de66d5b890169c29d901045850e"
     },
-    "aozora-057505.pdf": {
-      "fingerprint": "45a1ec09234b6583a7591e52d8c3e5c6cf6a58a5871f24a61cc9dd03eb0ea961",
-      "fonts": 72,
+    "江戸川乱歩-かいじん二十めんそう-aozora-057226.pdf": {
+      "fingerprint": "ccdc2b571cc7361a986df54e1c164de51926b3f58fabde7a7aa2cff47d06c439",
+      "fonts": 62,
       "images": 0,
-      "pages": 18,
-      "sha256": "23bb32bcbbd4be74eebe2fbdd89596b51fd5493f0140ea6dc58dde0e51783ce4"
+      "pages": 31,
+      "sha256": "b32a555d7b3683dcaf38b3e24fd29ab7735b05ada862b9d37bd1824c074317a3"
     },
-    "aozora-057506.pdf": {
+    "江戸川乱歩-かいじん二十めんそう-aozora-057227.pdf": {
+      "fingerprint": "594bad52c1f9b7a24a41a659906df5e8bd7b3a0404ea01905d3eb9077fe1bca2",
+      "fonts": 62,
+      "images": 0,
+      "pages": 31,
+      "sha256": "1ce23dd3b9530f76e1663367bcb6bdcb80e8b77cfc674fd28eee74730d3b43ca"
+    },
+    "江戸川乱歩-ふしぎな人-aozora-057230.pdf": {
+      "fingerprint": "3850853f5e947210875dd7c6a9087e27593411446dfdd7d0ed2b06ffa34000dd",
+      "fonts": 303,
+      "images": 0,
+      "pages": 101,
+      "sha256": "93c9f16551f8a3650f3f07a7b1a6e4e8176f772074dcdfc9c538f175836ef6b7"
+    },
+    "江戸川乱歩-まほうやしき-aozora-057165.pdf": {
+      "fingerprint": "e2ef0f96d374aa34e99579a5171b516cbf86fd527562778f6b15fffe0126e349",
+      "fonts": 28,
+      "images": 0,
+      "pages": 14,
+      "sha256": "1335eba716a4ed4b355eddeaf5e60f8d486ba098e2881ceb000c62df887efdcd"
+    },
+    "江戸川乱歩-サーカスの怪人-aozora-056680.pdf": {
+      "fingerprint": "2c99697a98d6207e7b5ffd60d2dd6372255998f91bd45fe61f09c3b3b67913a4",
+      "fonts": 580,
+      "images": 0,
+      "pages": 145,
+      "sha256": "0efc294d99368d3f372f3ad80f393475c9fcd8a4caffb60b0ae7854f316eda65"
+    },
+    "江戸川乱歩-一人の芭蕉の問題-aozora-057414.pdf": {
+      "fingerprint": "936569340214272b4cb2f2c9039efc148ba1a2d283147d91170621701e20fcc2",
+      "fonts": 27,
+      "images": 0,
+      "pages": 9,
+      "sha256": "0e7427471ea616eb591b91fe7e4f9c829ebd7e80bf91893f5b1659857916e5c5"
+    },
+    "江戸川乱歩-一人二役-aozora-057193.pdf": {
+      "fingerprint": "bdfff7385277f9ec4408726041a0cd8517d57e91c7bd330dcbc55ab4309c674e",
+      "fonts": 56,
+      "images": 0,
+      "pages": 14,
+      "sha256": "f0b022ca08ced25cd6b832240ec81e271adccad235e78111d6d22c0941cf2cf4"
+    },
+    "江戸川乱歩-一枚の切符-aozora-057182.pdf": {
+      "fingerprint": "bc6effd9058af24003158b16aab6be71745e452f5c3573357b1eb7fd3d47b6d6",
+      "fonts": 120,
+      "images": 0,
+      "pages": 24,
+      "sha256": "4aacf3ac3704d8792fd07618b87532a652b702c0455eaec18ea9147299244fba"
+    },
+    "江戸川乱歩-二癈人-aozora-057191.pdf": {
+      "fingerprint": "de6990dda358b83e7ce4f6cc944e9605386996bef1b552af5c23b631c31a108c",
+      "fonts": 84,
+      "images": 0,
+      "pages": 21,
+      "sha256": "e05ddaf5eb62b817547438d2139f023475aec484b62c22e8e0322b961b1ba0e9"
+    },
+    "江戸川乱歩-二銭銅貨-aozora-056647.pdf": {
+      "fingerprint": "7e10f9e1759fa833e3291df36f88b8ec7a5a280086b684807dc5596ae35af157",
+      "fonts": 160,
+      "images": 1,
+      "pages": 32,
+      "sha256": "e53e548cf5f41b1f8f287ebc4dd49d4f3b86ed7de4e693e0d31d4a37564e23d4"
+    },
+    "江戸川乱歩-双生児-aozora-057187.pdf": {
+      "fingerprint": "4bfa0c736fc3ef0dbe6b3d3f1243253b25c345b1be827bb92eb92985e48c1083",
+      "fonts": 84,
+      "images": 0,
+      "pages": 21,
+      "sha256": "0f661aa3ce93f5c602241b43242571fe320641d37e0333cc43172345a3b212e8"
+    },
+    "江戸川乱歩-塔上の奇術師-aozora-057109.pdf": {
+      "fingerprint": "d1383998c8a7bcff594ba87112c07c1ddfa43e393246656c8e3596ec05f172f7",
+      "fonts": 600,
+      "images": 2,
+      "pages": 150,
+      "sha256": "510c0bf73101d94e0005b52df2cfe0c25e84f37dac22ed1e5399c8471d06eb1e"
+    },
+    "江戸川乱歩-夢遊病者の死-aozora-057195.pdf": {
+      "fingerprint": "fd0ddb5b44330a57156a61fd447080c7a687b3fcb15be6ddc58b6b0b32a43184",
+      "fonts": 110,
+      "images": 0,
+      "pages": 22,
+      "sha256": "74f7fcfb99fbad62c9ff9cb9bd86ae953601a12382c934815d3adac90fe833fc"
+    },
+    "江戸川乱歩-妖怪博士-aozora-056670.pdf": {
+      "fingerprint": "4ad0bb8df6727dc7f50808a7b6fb26222cd9b69beb8f8e8f832932a243afe40a",
+      "fonts": 1125,
+      "images": 0,
+      "pages": 225,
+      "sha256": "f6c51945957f7091e36e5317c09d6f5c2cab86126d40000f3bef7aada08f8140"
+    },
+    "江戸川乱歩-宇宙怪人-aozora-056674.pdf": {
+      "fingerprint": "b5b3fb27b5899150422524b3e614da2d8b346aa71a67dbbebf302fa6d9f7d98b",
+      "fonts": 656,
+      "images": 0,
+      "pages": 164,
+      "sha256": "78960c537110d17cf7e8223acd097f67e73c31feb25e4fae1e73792e960d198c"
+    },
+    "江戸川乱歩-少年探偵団-aozora-056669.pdf": {
+      "fingerprint": "ec1c107550a9659c1a368dce768a5cb5b51d578411fba7f11c0e33e20db33897",
+      "fonts": 940,
+      "images": 0,
+      "pages": 188,
+      "sha256": "d034a8cd7e4e7825cc4ffc3cd46415780e77027141b0754326cb5bc8ba42ff9a"
+    },
+    "江戸川乱歩-屋根裏の散歩者-aozora-056649.pdf": {
+      "fingerprint": "fc98f72fc6edef98b12f61237e4c50c100bbae05e023de9d108eaa4f797835e1",
+      "fonts": 294,
+      "images": 4,
+      "pages": 49,
+      "sha256": "93ab1e8a68fce77ddc9122140029a49f9865393473612cde790b02e870d943f9"
+    },
+    "江戸川乱歩-幽霊-aozora-057196.pdf": {
+      "fingerprint": "119c0e7fdebe69ddd7a48d6d6bb6b0551a439d101f82f1d4b3f7947af00a8c27",
+      "fonts": 92,
+      "images": 0,
+      "pages": 23,
+      "sha256": "bc1132f9d5e9fce7412579b1ac3ac45ad1dad4c247379d7a3e5f528c0a62f41f"
+    },
+    "江戸川乱歩-心理試験-aozora-056646.pdf": {
+      "fingerprint": "4dfc9a62a3e6ff6d4db236057a13c1cdbf97b672fb365bae2ba290ffb6f206be",
+      "fonts": 200,
+      "images": 1,
+      "pages": 40,
+      "sha256": "752b6806261e41f6c690315754bf051cfc0faca14f53f180affb676471f8c0c9"
+    },
+    "江戸川乱歩-怪人と少年探偵-aozora-057225.pdf": {
+      "fingerprint": "954dd0141a1dd2fa2bd60208ed9972737e31485cc953ed7e5114e58f172e0645",
+      "fonts": 225,
+      "images": 0,
+      "pages": 75,
+      "sha256": "5649a809c65175a2aa9ccf1787c4037ee631414eb670b98cef5e291325bae7ce"
+    },
+    "江戸川乱歩-怪人二十面相-aozora-057228.pdf": {
+      "fingerprint": "4170187a82d6a7b662c4c28ceb5c388663ac9c9b33cb31eaf17cb5d683cbd967",
+      "fonts": 1242,
+      "images": 0,
+      "pages": 207,
+      "sha256": "5bfcbc5b742a6be0dab53298f44a9f5024fa56f55acac8e0476228cdbe84cfdb"
+    },
+    "江戸川乱歩-怪奇四十面相-aozora-056673.pdf": {
+      "fingerprint": "3712695e22d306d09ed010cb2466c22fb8302db5a424f85e7b5a206ed86d9dc4",
+      "fonts": 688,
+      "images": 7,
+      "pages": 172,
+      "sha256": "4084ca635639a47fb81a93555999081b6f260d9345c54061701b8f95cec34f92"
+    },
+    "江戸川乱歩-悪魔の紋章-aozora-057240.pdf": {
+      "fingerprint": "b01ce44da395d73aec76a8eaf4457d4ba72fe77f181301007c9f572b069477c0",
+      "fonts": 2502,
+      "images": 0,
+      "pages": 278,
+      "sha256": "cf5283631b878237750724bdbff963d79e50e95963b7c0a8a256e9d39edad3e5"
+    },
+    "江戸川乱歩-押絵と旅する男-aozora-056645.pdf": {
+      "fingerprint": "dca3ab0fe730cd8b6955b0b75c5017a6b43e3f41a368d11bd7c9fca71f7d9a42",
+      "fonts": 150,
+      "images": 0,
+      "pages": 30,
+      "sha256": "b17f7ac0bf6e7078f71e452c8565009d05e83a008a426c6244ba4d6989251eac"
+    },
+    "江戸川乱歩-指環-aozora-057197.pdf": {
+      "fingerprint": "6bb92032563042ad3e484b592c3343d2a12189a80639d32a2fa35213a579cc2c",
+      "fonts": 16,
+      "images": 0,
+      "pages": 8,
+      "sha256": "681f955d9ef041a944cedabccf3c016b94bea8924d37e788e2adcb0f13691003"
+    },
+    "江戸川乱歩-探偵小説の「謎」-aozora-057502.pdf": {
+      "fingerprint": "e448497ffb1c3c078c959046768d3d0f5c16bd95dc749ca0e6f72bb7af1fa81b",
+      "fonts": 2025,
+      "images": 131,
+      "pages": 225,
+      "sha256": "6d53dc66b45968b2769b8411edaf30de6e67c54dddc9783937d8b863a93212e4"
+    },
+    "江戸川乱歩-接吻-aozora-057186.pdf": {
+      "fingerprint": "904e2cdc5498acf3af98335a99b39a55ab91c3f2c478186e2ef720c8009b45a8",
+      "fonts": 60,
+      "images": 0,
+      "pages": 15,
+      "sha256": "13348a987cd01830af41cb6baff9ae02cd50274437f7174844151d24f05bba69"
+    },
+    "江戸川乱歩-日記帳-aozora-057190.pdf": {
+      "fingerprint": "c2d629d01378368212ba1a259101d7d77f82dd24337decdf1bb287300f7df3f8",
+      "fonts": 42,
+      "images": 0,
+      "pages": 14,
+      "sha256": "bcc02858fad3aa3d861a00fcd81c13fecee588e1d7837a40ea3e7a84f7548de4"
+    },
+    "江戸川乱歩-海底の魔術師-aozora-056677.pdf": {
+      "fingerprint": "1f0a203b93eab2e74d95c05d92e11317e680847083ba1033a64ae901fcff02f9",
+      "fonts": 564,
+      "images": 0,
+      "pages": 141,
+      "sha256": "24d542402c65de7abb7a6df1c05def281c29a304edbd3e07db3e879ac3129ef8"
+    },
+    "江戸川乱歩-湖畔亭事件-aozora-058039.pdf": {
+      "fingerprint": "6c51aea727103b50fce512e06b96cbd475124a0dd130db9c649b7a30e3f98df7",
+      "fonts": 854,
+      "images": 0,
+      "pages": 122,
+      "sha256": "5326601a0f2d8087fba146d25135e7a761e14ec61b14e144b9fe2397a8f86a68"
+    },
+    "江戸川乱歩-火星の運河-aozora-057506.pdf": {
       "fingerprint": "57778bde9b0a1db3906a4ee5cdfd57e832c951db208872e849d0a0244d5764ec",
       "fonts": 44,
       "images": 0,
       "pages": 11,
       "sha256": "1001804d2e29c14aa36cd3c77de801a5a445ab28cfeb3ea964fdc6d502c2a327"
     },
-    "aozora-058039.pdf": {
-      "fingerprint": "6c51aea727103b50fce512e06b96cbd475124a0dd130db9c649b7a30e3f98df7",
-      "fonts": 854,
+    "江戸川乱歩-灰色の巨人-aozora-056676.pdf": {
+      "fingerprint": "a8a12068aa340f335b4fd7e4485ed245dde6568d512dd17c2e760f6a19d93b20",
+      "fonts": 584,
       "images": 0,
-      "pages": 122,
-      "sha256": "5326601a0f2d8087fba146d25135e7a761e14ec61b14e144b9fe2397a8f86a68"
+      "pages": 146,
+      "sha256": "b9c582054b6fd02ce1a07dec0602aeb41265708d6343225c60681f38f8744409"
+    },
+    "江戸川乱歩-白昼夢-aozora-057192.pdf": {
+      "fingerprint": "6640448bea1e296a5f182471f0cbc4d100a79bf8e0bedf8953c62fac3df6459c",
+      "fonts": 30,
+      "images": 0,
+      "pages": 10,
+      "sha256": "c9dfb05577148bdeb06f1dc8147a578ee3946f44e512fe23d50557388781d2a8"
+    },
+    "江戸川乱歩-百面相役者-aozora-057194.pdf": {
+      "fingerprint": "0b9bc14555390f8210403a50b3de533a5099022475c242245c5f186eeb3e8e30",
+      "fonts": 76,
+      "images": 0,
+      "pages": 19,
+      "sha256": "2c60e90cfc3a8c331c72fe5a43fd88454a5008a49dace43dc34a8fefcef8fbc0"
+    },
+    "江戸川乱歩-算盤が恋を語る話-aozora-057188.pdf": {
+      "fingerprint": "798c8b26b058c76c355c18c74edaec5cdda371b15b34eb1aa1d52d7f85accee0",
+      "fonts": 68,
+      "images": 0,
+      "pages": 17,
+      "sha256": "2b66548e63f5e11c1e1747fecf49d501020cd61f496b688a2ce0e5e8829d5183"
+    },
+    "江戸川乱歩-虎の牙-aozora-056672.pdf": {
+      "fingerprint": "0f4e5a1c15988f248e5d00de693f4699eda81df7a766f5e8c6d4a128bdb4c7b5",
+      "fonts": 692,
+      "images": 0,
+      "pages": 173,
+      "sha256": "dd5869b60d5194d7685a670868ec380eca1340e7a14f5694c443f2b96d16cf27"
+    },
+    "江戸川乱歩-赤いカブトムシ-aozora-057105.pdf": {
+      "fingerprint": "77ac7d8115934aae7f3cc8823586d97a819070cefeeb2a74cd799c65eddd8ef6",
+      "fonts": 98,
+      "images": 0,
+      "pages": 49,
+      "sha256": "f631e90269a4972ba845d84c48e1f5376c8bec826e1990aca3dcf60f3b2cb449"
+    },
+    "江戸川乱歩-赤い部屋-aozora-057181.pdf": {
+      "fingerprint": "e4a041273dbaa68d62637e858108ff28a6fb6383c63660bc20efa532ad70eea3",
+      "fonts": 155,
+      "images": 0,
+      "pages": 31,
+      "sha256": "fbb40c1dfb42a6759a43c048f4b4a70eeea894aa8c3afd641aa5d9c002f29c19"
+    },
+    "江戸川乱歩-踊る一寸法師-aozora-057505.pdf": {
+      "fingerprint": "45a1ec09234b6583a7591e52d8c3e5c6cf6a58a5871f24a61cc9dd03eb0ea961",
+      "fonts": 72,
+      "images": 0,
+      "pages": 18,
+      "sha256": "23bb32bcbbd4be74eebe2fbdd89596b51fd5493f0140ea6dc58dde0e51783ce4"
+    },
+    "江戸川乱歩-透明怪人-aozora-057229.pdf": {
+      "fingerprint": "364c35b9424c9c910b4b9ae76d64747ba2124e0e914eb63aac425dec42d1bba1",
+      "fonts": 700,
+      "images": 0,
+      "pages": 175,
+      "sha256": "8f6112818e9754344f964aa0502a92a457bbce2b42cd496d555f13949555717f"
+    },
+    "江戸川乱歩-鉄人Ｑ-aozora-057108.pdf": {
+      "fingerprint": "271861a0f39d0bce1b83070b8b3ad3d43fa39e308ec92b358c1b73914a6e599d",
+      "fonts": 620,
+      "images": 0,
+      "pages": 155,
+      "sha256": "13259151b4cacce9919fe224a07129c271b0ce793b9a1e7a2df8fa39249c92a8"
+    },
+    "江戸川乱歩-鉄塔の怪人-aozora-056675.pdf": {
+      "fingerprint": "31012cf08ca42fcaa09878de5dd5992203d8d81a4fda114682c0f9bf983b6b40",
+      "fonts": 608,
+      "images": 0,
+      "pages": 152,
+      "sha256": "a305142d46a99f42534610c7382902e4ad265f649dc69371b2034caa4d4ed0f6"
+    },
+    "江戸川乱歩-鏡地獄-aozora-057343.pdf": {
+      "fingerprint": "95b6e8ee6ce20ac426dd7a3f9614fa23acf816341426042dfa4ea8f3237430ba",
+      "fonts": 100,
+      "images": 0,
+      "pages": 25,
+      "sha256": "37336c3f6ae1c43c0d9c1d924186a90300d3e4e82d8589d77a0f7ef992e7833c"
+    },
+    "江戸川乱歩-随筆銭形平次-aozora-054836.pdf": {
+      "fingerprint": "544d527601bd3f8ae1e6c67fe6053e6f2232c2bc583ee3f5493d6fc4de0ef528",
+      "fonts": 36,
+      "images": 0,
+      "pages": 12,
+      "sha256": "ea6156290962b0851bb4d3dfa1638f6a1ebe7832bfae836be558b8d38d6f5b92"
+    },
+    "江戸川乱歩-青銅の魔人-aozora-056671.pdf": {
+      "fingerprint": "fdb5c361c3527089aabb7778c19454e9238cc1df5b30c04ffbca4c9cbe3c2a77",
+      "fonts": 750,
+      "images": 0,
+      "pages": 150,
+      "sha256": "6a2c22a78170b3ab9deb9b0dc29daf783c196cb38cdafd21d389500c46916350"
+    },
+    "江戸川乱歩-魔法博士-aozora-056679.pdf": {
+      "fingerprint": "8cf4e5dd10f65ad4fc28dbd2e20d49f84d9b8d7510060ff5a58725027a8811cb",
+      "fonts": 572,
+      "images": 0,
+      "pages": 143,
+      "sha256": "4a2e6715b5540a26aafbb19c834f130a732b668772c275ebe73c78bf93d97f3b"
+    },
+    "江戸川乱歩-黄金豹-aozora-056678.pdf": {
+      "fingerprint": "d6acdd1ae4b3dec538b65042ed10b6a34e9dffc9710539792037c1c816d09e9e",
+      "fonts": 576,
+      "images": 0,
+      "pages": 144,
+      "sha256": "aa3f2f2cdaa363af48c8615ae62887f86d6e4391886eb924e4b42ae264b4342a"
+    },
+    "江戸川乱歩-黒手組-aozora-057185.pdf": {
+      "fingerprint": "1436729a615efc708b7ecbc9916fe23d75072d57463b8d292c2d15a84ecd11bd",
+      "fonts": 170,
+      "images": 1,
+      "pages": 34,
+      "sha256": "8e1391d82dc911aa7eeb93959d8e163f7f4cf0900a0e6145de440f698191362e"
+    },
+    "江戸川乱歩-黒蜥蜴-aozora-057405.pdf": {
+      "fingerprint": "a21cf07d22a839f14ac4803ac87323c48ab390af6d9603b05b1634146ffd1ec6",
+      "fonts": 1640,
+      "images": 0,
+      "pages": 205,
+      "sha256": "db48c281f2e98b35fbe412efb95b4ff4a4de653a0d76b02989106359b370e790"
+    },
+    "江戸川乱歩-Ｄ坂の殺人事件-aozora-056650.pdf": {
+      "fingerprint": "1d8bde9cf55e89f0925346b5818e212c617bedf8c59238dc69c95b862cf1f993",
+      "fonts": 190,
+      "images": 0,
+      "pages": 38,
+      "sha256": "a35699d2f7e5d8436eb37d0994f1651108a417351d981b1df43a38b2c542cc3c"
+    },
+    "福沢諭吉-中元祝酒の記-aozora-047152.pdf": {
+      "fingerprint": "b283f39ad673d096cd9eb2d84d53ba55077ad033e4b9575af77f3c216bc6364e",
+      "fonts": 10,
+      "images": 0,
+      "pages": 5,
+      "sha256": "97e723f52249b934afd10dfcf4d626af8db498510dfc0a5f399d2336857c6797"
+    },
+    "福沢諭吉-中津留別の書-aozora-046890.pdf": {
+      "fingerprint": "6dade453c1ceab6b4e1aaf0d4491886820e6c4085a56be56ed07f64c9b098693",
+      "fonts": 27,
+      "images": 0,
+      "pages": 9,
+      "sha256": "884c0c0af2e2ed39cfc472bc56e97e4389c2e50e2e15adc86ccabc39fe779af5"
+    },
+    "福沢諭吉-亜細亜諸国との和戦は我栄辱に関するなきの説-aozora-049279.pdf": {
+      "fingerprint": "9900867ecf00f41f132aad0cbaac99f40b1b4d0486b93708ebec9a6140738cfb",
+      "fonts": 48,
+      "images": 0,
+      "pages": 12,
+      "sha256": "ca0c3abb28c163c34590307590e4ee6e06b25bc0c3d07a4b0c4a0d65fa0c846b"
+    },
+    "福沢諭吉-京都学校の記-aozora-047295.pdf": {
+      "fingerprint": "f0f4173e6a8047a45343a6dfa6ceb5f9abbf632752f6d4129e97ed016e416533",
+      "fonts": 24,
+      "images": 0,
+      "pages": 8,
+      "sha256": "30089c48e8e1546b7a84b4a1a898d4b08f8556a1577bde17067c101e7468fa57"
+    },
+    "福沢諭吉-人生の楽事-aozora-050298.pdf": {
+      "fingerprint": "e084e3170d4152767d46ef760477b3b50bcd498216a06ea73a76d09be04d1cf2",
+      "fonts": 24,
+      "images": 0,
+      "pages": 8,
+      "sha256": "931e154523372690e11cef8d2d19b2c9a702c0eace3ad61fc23ff3c543b2c3da"
+    },
+    "福沢諭吉-女大学評論-aozora-043029.pdf": {
+      "fingerprint": "634da51baaaca59169c48be19005238119fadd0bb7821b517a8e20433de3cafd",
+      "fonts": 315,
+      "images": 6,
+      "pages": 45,
+      "sha256": "af821f764e6b27a3c666145ec017b097b2604d349ed04af6addc76be0ac6800f"
+    },
+    "福沢諭吉-学校の説-aozora-047149.pdf": {
+      "fingerprint": "3a03ba7e11be7634909adf6fbc86f1f605a5d77ebf59ead49c28d8615e1dce77",
+      "fonts": 56,
+      "images": 0,
+      "pages": 14,
+      "sha256": "86a95df2a34d1c8be074c6f15d025f3eebd8a2293c9d3ebda7a629bf6bab5390"
+    },
+    "福沢諭吉-学者安心論-aozora-047054.pdf": {
+      "fingerprint": "4de77a11c29097fb294dcfce1fdffd22564adc8a845eb30537745ee39c00a64c",
+      "fonts": 92,
+      "images": 0,
+      "pages": 23,
+      "sha256": "590b2e95f1576214d2015ea3fa2e4d189d8bca7531ab727fe3c47eaa0dce720e"
+    },
+    "福沢諭吉-家庭習慣の教えを論ず-aozora-047219.pdf": {
+      "fingerprint": "9f587ceda6a9a65aaa79d2132130b947729d1122682b5cf77282f88455c7e26a",
+      "fonts": 21,
+      "images": 0,
+      "pages": 7,
+      "sha256": "ab17c4a5072c5ee440673dd11b4bb0c5711872a33c84344657a255260949c504"
+    },
+    "福沢諭吉-小学教育の事-aozora-050545.pdf": {
+      "fingerprint": "ed45291b3fb9520817b06fa78042b79f931400b7fc1d4b1c9916709d33118f6c",
+      "fonts": 60,
+      "images": 0,
+      "pages": 15,
+      "sha256": "03261fffbf0e8100aa2b5ed0905305eae6fba5c71199b58c685a8d205a0613f4"
+    },
+    "福沢諭吉-御時務の儀に付申上候書付-aozora-049832.pdf": {
+      "fingerprint": "897bd33012cc6a11813a2f61b51da40eae499b9f6caa8e2ec460812d673da8e7",
+      "fonts": 24,
+      "images": 2,
+      "pages": 8,
+      "sha256": "3f248d2198368c0a8d2a259501661b2097d27bcf07cf0a09f0b580546ec8d4e3"
+    },
+    "福沢諭吉-徳育如何-aozora-047030.pdf": {
+      "fingerprint": "2e669a9ed3c2678bbc5a49a6fde38de435cc89ecc068273e73804fae98a0ccf5",
+      "fonts": 72,
+      "images": 1,
+      "pages": 18,
+      "sha256": "c1ac2dffa4a382c83016c13508f9d0a286bb2889ccbfe3ef491709a09a58ec41"
+    },
+    "福沢諭吉-慶応義塾学生諸氏に告ぐ-aozora-049756.pdf": {
+      "fingerprint": "d6043fccbe421cda415e39b9d5785546dca06f171ca96ad632374f66dfe5e897",
+      "fonts": 27,
+      "images": 0,
+      "pages": 9,
+      "sha256": "dfea85863cc9981450c185338a398472860076ed1c6594d79a1db1b8d266eac9"
+    },
+    "福沢諭吉-慶応義塾新議-aozora-047150.pdf": {
+      "fingerprint": "4e780f5d508caee1139526f46e9766b084eaecce1c3661ef0a40afa6f8cfc75f",
+      "fonts": 12,
+      "images": 0,
+      "pages": 6,
+      "sha256": "3177b59de453aa0b5390964a398867384214bdac94a622f66f047663c6a8217c"
+    },
+    "福沢諭吉-成学即身実業の説、学生諸氏に告ぐ-aozora-049757.pdf": {
+      "fingerprint": "729c45bff74c68161f50a82150993d7fb86ce56e305e8f47bccf1e0ace36f1ce",
+      "fonts": 24,
+      "images": 0,
+      "pages": 8,
+      "sha256": "45683b436aa9c02b96412495e3995cb437d0d3d1bbc473ae31e690714f98136a"
+    },
+    "福沢諭吉-政事と教育と分離すべし-aozora-050273.pdf": {
+      "fingerprint": "01d1c7b2229abfc69c20b28496ccdf8e88357a8eceadce308a339205adae8de3",
+      "fonts": 27,
+      "images": 0,
+      "pages": 9,
+      "sha256": "d61a47aaabf338da893f8b394e61a1df1b61b7881e5148ec04fe5753a268be22"
+    },
+    "福沢諭吉-教育の事-aozora-049778.pdf": {
+      "fingerprint": "a52a058309a6f4818d48d552fdd052f4676d055acc7eaf26aa3c5d0bc63fa8b1",
+      "fonts": 48,
+      "images": 0,
+      "pages": 12,
+      "sha256": "59290a8bb5469f7a1056d2be6341b0d156656a9f7aa16d6264f9ea307fd25b22"
+    },
+    "福沢諭吉-教育の目的-aozora-046734.pdf": {
+      "fingerprint": "54e6bcddce9e3dfd41dc0ff139ef196becee13148589916befee45bb1e3e46ea",
+      "fonts": 36,
+      "images": 0,
+      "pages": 12,
+      "sha256": "f3c2882e88941c630b34e6b0506338346773c8f83fcdb6900eed9672e8f33c01"
+    },
+    "福沢諭吉-文明教育論-aozora-050553.pdf": {
+      "fingerprint": "4b4c3d3b4e03dd4e2ab73039f32c2537874f7516e69f5e9650a7653ef69a09e9",
+      "fonts": 24,
+      "images": 0,
+      "pages": 8,
+      "sha256": "8d3e388f1b3caef049f1cd845522ca87a4db30cb2f5bcaf107fa96a5ee87c15d"
+    },
+    "福沢諭吉-新女大学-aozora-043064.pdf": {
+      "fingerprint": "3c9b8b6eac22f0a7b58267b7b4d1fd32e85b6ef2207cbe783525e0d9130d6866",
+      "fonts": 168,
+      "images": 0,
+      "pages": 28,
+      "sha256": "2801bea4eb3ef5ab2b830107c6e5b1cf9e460574443d52e1b913e91e3f842959"
+    },
+    "福沢諭吉-日本男子論-aozora-047293.pdf": {
+      "fingerprint": "15e686ce1de9377584c9413ec16fea3f9d1160edb6e577fb0e2a91db390e7f75",
+      "fonts": 228,
+      "images": 0,
+      "pages": 38,
+      "sha256": "daa20275ff31e95e6f3218c63154a54c5e994253e589623919a59a29d7d8eb28"
+    },
+    "福沢諭吉-明治三十一年三月十二日三田演説会に於ける演説-aozora-046848.pdf": {
+      "fingerprint": "02a71163300195d0078e6f8e8cdb1cb9b1e97a69089e6b58bb3217b0d879f115",
+      "fonts": 33,
+      "images": 2,
+      "pages": 11,
+      "sha256": "d563f094a1d407ed40c7ddc7f4dff4f40aad2e45f1c23fa20407ba4c18c72df9"
+    },
+    "福沢諭吉-物理学の要用-aozora-046686.pdf": {
+      "fingerprint": "6adf21e38d35012195bb43784499b2a4d498f439e0d1d3b2f025effaf85985dc",
+      "fonts": 21,
+      "images": 0,
+      "pages": 7,
+      "sha256": "8adacfca5abbdb26b197dfe3b32918ca996d2876bf88a549c945a875b42eeb97"
+    },
+    "福沢諭吉-瘠我慢の説-aozora-046827.pdf": {
+      "fingerprint": "9a9ba6cd9f87f8b5b9ff42adf9f6607cf5c8aa2bf06496cca7acb30025b9feb1",
+      "fonts": 12,
+      "images": 0,
+      "pages": 6,
+      "sha256": "cb51b94ff3bc1f453094be2ae8cb6506aeaeb3e2acb9eba49abede40ffbfdead"
+    },
+    "福沢諭吉-福翁自伝-aozora-001864.pdf": {
+      "fingerprint": "9895b3c38d682e201ad67cce52eeaebce28ded97c251becbd71a15b61b2dda8c",
+      "fonts": 4356,
+      "images": 5,
+      "pages": 396,
+      "sha256": "0d2189468ea7144d2b49bacf743418083fa4614b689327651face36560e1bf4c"
+    },
+    "福沢諭吉-経世の学、また講究すべし-aozora-046685.pdf": {
+      "fingerprint": "0523e6bdd7d6fd8b86addda290fc6366339ebee04ec0560306a0af4c3c682fa9",
+      "fonts": 27,
+      "images": 0,
+      "pages": 9,
+      "sha256": "5d3facd88b083625f8e61aa81af590f8f4d2c3d582bdaa97542b0b58c726722c"
+    },
+    "福沢諭吉-肉食之説-aozora-047343.pdf": {
+      "fingerprint": "d23f435dbbd8aa80924c07e01cf036591d21cb2a095d91f877b3bd4ac70bc570",
+      "fonts": 21,
+      "images": 1,
+      "pages": 7,
+      "sha256": "b13f67fb843182cd17e8c4a830e7b83b423df4b9c52bc931dd52acfcb46aeb8c"
+    },
+    "福沢諭吉-読倫理教科書-aozora-050307.pdf": {
+      "fingerprint": "fb0ed4ffb14ceb5999916f7115e651a6fd01b3054056e658bef0ea295fe3b0ce",
+      "fonts": 24,
+      "images": 0,
+      "pages": 8,
+      "sha256": "1d72847958dd7aee994a9918d5a5f1131525d9b262820424349cd7fa4c6c3f05"
+    },
+    "福沢諭吉-養生の心得-aozora-047353.pdf": {
+      "fingerprint": "eea3afd28c5ae86c1ad7df310c2501a4088e954d66a03f5ad861defbbbf91606",
+      "fonts": 56,
+      "images": 3,
+      "pages": 14,
+      "sha256": "ff55dd56ee594283e84d292b044efed370c5f7e1602c442fbabe714b8596725f"
     }
   },
   "schema_version": 1,
