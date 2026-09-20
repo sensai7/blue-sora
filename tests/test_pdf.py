@@ -91,6 +91,17 @@ class PdfTests(unittest.TestCase):
         self.assertAlmostEqual(base_center, reading_center, delta=0.2)
         self.assertLess(max(character["bottom"] for character in reading), min(character["top"] for character in base))
 
+    def test_pdf_embeds_a_gaiji_used_as_a_ruby_base(self) -> None:
+        work = sample_work()
+        work["assets"][0]["id"] = "gaiji-1"
+        work["content"]["body"][1]["inlines"][0] = {
+            "type": "ruby",
+            "base": [{"type": "gaiji", "asset_id": "gaiji-1", "alt": "外字"}],
+            "reading": "がいじ",
+        }
+        payload = build_pdf(work, [sample_author()], self.catalog)
+        self.assertGreater(validate_pdf_bytes(payload, work)["images"], 0)
+
     def test_full_builder_caches_unchanged_pdf(self) -> None:
         (self.catalog / "indexes").mkdir(parents=True)
         (self.catalog / "works").mkdir()

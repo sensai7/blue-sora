@@ -22,10 +22,10 @@
         "kind": {"enum": ["gaiji", "illustration"]},
         "build_path": {"type": "string", "pattern": "^canonical/assets/"},
         "original_url": {"type": "string", "minLength": 1},
-        "status": {"const": "stored"},
+        "status": {"enum": ["pending", "stored", "error"]},
         "mime_type": {"type": ["string", "null"]},
-        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-        "byte_size": {"type": "integer", "minimum": 1},
+        "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "byte_size": {"type": ["integer", "null"], "minimum": 1},
         "diagnostic": {"type": ["string", "null"]}
       },
       "additionalProperties": false

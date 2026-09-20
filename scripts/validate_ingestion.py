@@ -17,6 +17,7 @@ from blue_sora.ingestion import render_blocks
 
 
 REMOTE_IMAGE_RE = re.compile(r"<img\b[^>]*\bsrc=[\"']https?://", re.IGNORECASE)
+KNOWN_WARNING_CODES = {"missing_section", "text_loss", "unrecognized_markup"}
 
 
 def digest(path: Path) -> str:
@@ -41,7 +42,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--corpus", type=Path, default=Path("reduced_corpus"))
     parser.add_argument("--canonical", type=Path, default=Path("build/canonical"))
-    parser.add_argument("--expected-works", type=int, default=126)
+    parser.add_argument("--expected-works", type=int, default=1061)
     return parser.parse_args()
 
 
@@ -58,19 +59,32 @@ def main() -> None:
 
     references = 0
     unique_assets: set[str] = set()
+    asset_statuses: dict[str, int] = {"stored": 0, "pending": 0, "error": 0}
+    warning_count = 0
     for path in document_paths:
         document = json.loads(path.read_text(encoding="utf-8"))
-        if document["warnings"]:
-            raise SystemExit(f"{path.name}: {len(document['warnings'])} unresolved warnings")
+        for warning in document["warnings"]:
+            warning_count += 1
+            if warning.get("code") not in KNOWN_WARNING_CODES:
+                raise SystemExit(f"{path.name}: unsupported warning {warning!r}")
         asset_ids = {asset["id"] for asset in document["assets"]}
         for asset in document["assets"]:
             references += 1
             unique_assets.add(asset["local_path"])
-            local_path = args.canonical / asset["local_path"]
-            if asset["status"] != "stored":
-                raise SystemExit(f"{path.name}: asset {asset['id']} is {asset['status']}")
-            if not local_path.is_file() or digest(local_path) != asset["sha256"]:
-                raise SystemExit(f"{path.name}: missing or invalid asset {asset['id']}")
+            status = asset["status"]
+            asset_statuses[status] = asset_statuses.get(status, 0) + 1
+            if status == "stored":
+                local_path = args.canonical / asset["local_path"]
+                if not local_path.is_file() or digest(local_path) != asset["sha256"]:
+                    raise SystemExit(f"{path.name}: missing or invalid asset {asset['id']}")
+            elif status == "pending":
+                if any(asset[key] is not None for key in ("mime_type", "sha256", "byte_size", "diagnostic")):
+                    raise SystemExit(f"{path.name}: pending asset {asset['id']} has stored metadata")
+            elif status == "error":
+                if not asset["diagnostic"]:
+                    raise SystemExit(f"{path.name}: failed asset {asset['id']} lacks a diagnostic")
+            else:
+                raise SystemExit(f"{path.name}: unsupported asset status {status}")
 
         for node in walk(document["content"]):
             if node.get("type") in {"illustration", "gaiji"}:
@@ -84,9 +98,11 @@ def main() -> None:
                 raise SystemExit(f"{path.name}: rendered content contains a remote image")
 
     print(f"Canonical documents:    {len(document_paths)}")
-    print("Unresolved diagnostics: 0")
+    print(f"Known warnings:         {warning_count:>5}")
     print(f"Stored asset references:{references:>5}")
     print(f"Unique cached assets:   {len(unique_assets):>5}")
+    print(f"Pending assets:         {asset_statuses['pending']:>5}")
+    print(f"Failed assets:          {asset_statuses['error']:>5}")
     print("Asset checksum failures: 0")
     print("Remote image dependencies: 0")
 

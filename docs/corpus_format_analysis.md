@@ -2,26 +2,28 @@
 
 ## Dataset
 
-The reduced corpus contains 126 HTML works and 126 matching metadata rows:
+The reduced corpus contains 1,061 HTML works and 1,061 matching metadata rows
+from 14 author records:
 
-- 江戸川乱歩: 55
-- 福沢諭吉: 35
-- 樋口一葉: 36
-- 樋口夏子: 0 under that name; the supplied CSV catalogues her works as
-  樋口一葉
+- 芥川竜之介: 371; 太宰治: 272; 夏目漱石: 104; 森鴎外: 89
+- 江戸川乱歩: 55; 樋口一葉: 36; 福沢諭吉: 35; 田山花袋: 28
+- 谷崎潤一郎: 23; 徳田秋声: 21; 二葉亭四迷: 11; 上田敏: 7
+- 小泉八雲: 5; 坪内逍遥: 4
 
-All 126 selected metadata records have a corresponding corpus file. The
-original corpus already excludes the short works mentioned in the project
-brief; no selected files are missing.
+All selected metadata records have a corresponding corpus file. `樋口夏子` is
+included in the selector for compatibility, but the supplied CSV catalogues
+those works under the pen name `樋口一葉`; Akutagawa is catalogued as
+`芥川竜之介`.
 
 ## Encoding and outer structure
 
 - `aozora.csv` is UTF-8 with a BOM, despite the work files being Shift-JIS.
-- All 126 selected HTML files declare `shift_jis` and decode cleanly with
-  Python's `cp932` codec. CP932 is an appropriate tolerant decoder for this
-  historical Shift-JIS material.
-- All 126 declare XHTML 1.1.
-- All 126 contain `div.main_text` and Dublin Core `DC.Creator` metadata.
+- The selected HTML files declare `shift_jis`. Ingestion uses Python's `cp932`
+  codec with replacement handling so isolated invalid bytes in publisher notes
+  cannot discard an otherwise readable work.
+- The corpus uses XHTML 1.1 with `div.main_text` and Dublin Core `DC.Creator`
+  metadata; individual works still vary in their inline and presentational
+  markup.
 - The source files should remain immutable. Decode during ingestion, normalize
   to Unicode internally, and emit generated pages as UTF-8.
 
@@ -36,31 +38,23 @@ directly into the generated site.
   `dogyo-naka-midashi`, and `dogyo-ko-midashi`.
 - `midashi_anchor` is commonly attached to a heading anchor and is not itself a
   semantic heading level.
-- Ruby is pervasive: 123 of 126 files contain ruby markup, with 64,361 ruby
-  elements in the reduced set.
-- 45 files contain images. Relative image URLs cannot be assumed to resolve in
-  a separately generated site.
+- Ruby is pervasive, and illustrations and gaiji occur throughout the corpus.
+  Relative image URLs cannot be assumed to resolve in a separately generated
+  site.
 - Presentational classes include indentation (`jisage_*`), right alignment
   (`chitsuki_*`), emphasis (`sesame_dot`, `futoji`), boxed text (`keigakomi`),
   annotations (`notes`, `warichu`), gaiji, and illustrations.
 - Bibliographic and notation-note sections follow the main text and must not be
   counted as prose or placed inside the reader body.
 
-## Baseline size and outlier signals
+## Baseline and outlier signals
 
-For the current parser's visible text extraction:
-
-| Measure | Minimum | Median | Mean | Maximum |
-|---|---:|---:|---:|---:|
-| Visible characters | 1,056 | 12,293 | 28,314 | 278,818 |
-| File bytes | 5,093 | 40,720 | 88,090 | 1,317,714 |
-| Sentences | 1 | 132 | 595 | 3,828 |
-| Unique kanji | 28 | 612 | 694 | 2,384 |
-
-There are no files below 1,000 visible characters, no files without a detected
-sentence, and no decoding replacements. Very low sentence counts should still
-be reviewed: punctuation conventions and headings can make sentence-based
-metrics misleading even when a file is valid.
+The expanded corpus deliberately contains a wider range of forms and lengths
+than the original 126-work development set. Rebuild `build/analysis` and use
+`scripts/validate_difficulty.py` to obtain current aggregate figures; do not
+treat legacy sample statistics as corpus-wide limits. Very low sentence counts
+and decoding replacements are diagnostics to review, not automatic grounds to
+discard a work.
 
 ## Proposed canonical work format
 

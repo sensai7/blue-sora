@@ -20,7 +20,11 @@ remain part of the prose.
 - **Unique words used once %:** single-use lemmas divided by unique lemmas.
 - **Unique kanji:** distinct CJK ideographs, including iteration mark `々`.
 - **Unique kanji used once:** kanji occurring exactly once in the work.
+- **Non-Jōyō kanji:** total occurrences of kanji outside the 2,136-character
+  2010 Jōyō Kanji list. Listed alternate forms are treated as Jōyō.
 - **Average sentence length:** word tokens per non-empty sentence.
+- **Long sentence length (90th percentile):** the word-token count at or above
+  which the longest 10% of detected sentences fall.
 - **Characters:** non-whitespace prose characters.
 - **Sentence boundaries:** `。`, `！`, `？`, `!`, `?`, or a canonical prose
   line/paragraph break. The latter is required for older works whose source

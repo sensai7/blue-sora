@@ -14,7 +14,25 @@ from collections import Counter
 from pathlib import Path
 
 
-DEFAULT_AUTHORS = ("江戸川乱歩", "福沢諭吉", "樋口夏子", "樋口一葉")
+DEFAULT_AUTHORS = (
+    "江戸川乱歩",
+    "福沢諭吉",
+    "樋口夏子",
+    "樋口一葉",
+    "夏目漱石",
+    "森鴎外",
+    "芥川龍之介",
+    "芥川竜之介",
+    "太宰治",
+    "田山花袋",
+    "徳田秋声",
+    "谷崎潤一郎",
+    "二葉亭四迷",
+    "坪内逍遥",
+    "山本周五郎",
+    "上田敏",
+    "小泉八雲",
+)
 
 
 def normalized_name(row: dict[str, str]) -> str:

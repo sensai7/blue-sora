@@ -15,8 +15,8 @@ from blue_sora.linguistics import MODEL_VERSION
 
 REQUIRED_METRICS = {
     "length_words", "unique_words", "hapax_words", "hapax_words_percent",
-    "unique_kanji", "hapax_kanji", "average_sentence_length", "characters",
-    "sentences",
+    "unique_kanji", "hapax_kanji", "non_joyo_kanji", "average_sentence_length",
+    "sentence_length_p90", "characters", "sentences",
 }
 
 
@@ -24,7 +24,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--canonical", type=Path, default=Path("build/canonical"))
     parser.add_argument("--analysis", type=Path, default=Path("build/analysis"))
-    parser.add_argument("--expected-works", type=int, default=126)
+    parser.add_argument("--expected-works", type=int, default=1061)
     return parser.parse_args()
 
 

@@ -6,7 +6,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from blue_sora.linguistics import analyze_base, finalize, prose_text, split_sentences, tokenize
+from blue_sora.linguistics import analyze_base, finalize, percentile, prose_text, split_sentences, tokenize
 
 
 class LinguisticsTests(unittest.TestCase):
@@ -30,6 +30,10 @@ class LinguisticsTests(unittest.TestCase):
         self.assertGreaterEqual(len(tokens), 5)
         self.assertNotIn("。", tokens)
 
+    def test_ninetieth_percentile_uses_nearest_rank(self) -> None:
+        self.assertEqual(percentile([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 0.9), 9)
+        self.assertIsNone(percentile([], 0.9))
+
     def test_prose_excludes_heading_note_and_ruby_reading(self) -> None:
         blocks = [
             {"type": "heading", "level": 2, "inlines": [{"type": "text", "text": "章題"}]},
@@ -44,7 +48,7 @@ class LinguisticsTests(unittest.TestCase):
         document = {
             "metadata": {"作品ID": "1"},
             "provenance": {"source_sha256": "a" * 64},
-            "content": {"body": [{"type": "paragraph", "inlines": [{"type": "text", "text": "猫が歩く。犬も歩く。"}]}]},
+            "content": {"body": [{"type": "paragraph", "inlines": [{"type": "text", "text": "猫が歩く。麒麟も歩く。"}]}]},
         }
         base = analyze_base(document)
         words = Counter(base.words)
@@ -53,7 +57,9 @@ class LinguisticsTests(unittest.TestCase):
         second = finalize(base, words, kanji)
         self.assertEqual(first, second)
         self.assertEqual(first["model_version"], "blue-sora-difficulty-v1")
-        self.assertEqual(first["metrics"]["characters"], 10)
+        self.assertEqual(first["metrics"]["characters"], 11)
+        self.assertEqual(first["metrics"]["non_joyo_kanji"], 2)
+        self.assertEqual(first["metrics"]["sentence_length_p90"], 3)
         self.assertIsNone(first["difficulty"]["average_difficulty"])
         self.assertEqual(first["status"], "outlier")
 

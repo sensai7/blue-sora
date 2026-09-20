@@ -42,11 +42,14 @@ and PDF generation independent of runtime Aozora access.
 
 The downloader is resumable: an existing cache file is hashed and reused.
 Retrieval failures are recorded on the asset without discarding the rest of
-the work.
+the work. `status` is `stored` only when the local cache has passed checksum
+validation; `pending` records await retrieval, while `error` records retain
+their diagnostic for a later retry.
 
-Run `scripts/validate_ingestion.py` after an asset-backed build to verify the
-source/document set, zero unresolved diagnostics, local asset references,
-cache checksums, and absence of remote image dependencies in rendered output.
+Run `scripts/validate_ingestion.py` to verify the source/document set, known
+ingestion diagnostics, asset-status invariants, stored-asset checksums, and
+absence of remote image dependencies in rendered output. Pending assets are
+valid before an asset-download build; failed assets must include a diagnostic.
 
 ## Current diagnostics
 

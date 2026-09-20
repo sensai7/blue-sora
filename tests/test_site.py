@@ -28,8 +28,20 @@ class SiteTests(unittest.TestCase):
 
     def test_generated_catalog_links_to_work_pages(self) -> None:
         html = Path("build/site/index.html").read_text(encoding="utf-8")
-        self.assertIn('works/aozora-000386/index.html', html)
-        self.assertTrue(Path("build/site/works/aozora-000386/index.html").is_file())
+        work_pages = sorted(Path("build/site/works").glob("*/index.html"))
+        self.assertTrue(work_pages)
+        relative_path = work_pages[0].as_posix().removeprefix("build/site/")
+        self.assertIn(relative_path, html)
+
+    def test_generated_work_metrics_have_explanatory_tooltips(self) -> None:
+        html = Path("build/site/works/aozora-058039/index.html").read_text(encoding="utf-8")
+        self.assertIn('title="Word tokens in the prose, excluding whitespace, punctuation, and symbols."', html)
+        self.assertIn('title="Average number of word tokens in each non-empty sentence."', html)
+        self.assertIn('title="Distinct normalized word lemmas used in the prose."', html)
+        self.assertIn('title="The number of kanji occurrences outside the 2010 Jōyō Kanji list. Listed alternate forms are included."', html)
+        self.assertEqual(html.count('<div title='), 15)
+        self.assertIn("Difficulty weights: lexical rarity 55% · kanji rarity 25% · sentence complexity 20%", html)
+        self.assertNotIn("weight 55%", html)
 
     def test_literary_era_uses_author_lifespan(self) -> None:
         self.assertEqual(literary_era("1901-02-03"), "Meiji")

@@ -41,7 +41,7 @@ from .reader import export_filename
 from blue_sora.ingestion import canonical_text
 
 
-PDF_GENERATOR_VERSION = "blue-sora-pdf-v3"
+PDF_GENERATOR_VERSION = "blue-sora-pdf-v4"
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 FONT_PATH = PROJECT_ROOT / "assets" / "fonts" / "biz-ud-mincho" / "BIZUDMincho-Regular.ttf"
 FONT_LICENSE_PATH = PROJECT_ROOT / "assets" / "fonts" / "biz-ud-mincho" / "OFL.txt"
@@ -204,11 +204,20 @@ class RubyParagraph(Flowable):
                         width=token.width, height=token.height, mask="auto",
                     )
                 elif token.kind == "ruby":
-                    base_width = pdfmetrics.stringWidth(token.text, FONT_NAME, base_size)
+                    base_width = sum(child.width for child in token.children)
                     reading_width = pdfmetrics.stringWidth(token.reading, FONT_NAME, self.ruby_font_size)
-                    self.canv.setFillColor(self.style.textColor)
-                    self.canv.setFont(FONT_NAME, base_size)
-                    self.canv.drawString(x + (token.width - base_width) / 2, baseline, token.text)
+                    base_x = x + (token.width - base_width) / 2
+                    for child in token.children:
+                        if child.kind == "image" and child.path is not None:
+                            self.canv.drawImage(
+                                str(child.path), base_x, baseline - child.height * 0.75,
+                                width=child.width, height=child.height, mask="auto",
+                            )
+                        else:
+                            self.canv.setFillColor(self.style.textColor)
+                            self.canv.setFont(FONT_NAME, child.font_size)
+                            self.canv.drawString(base_x, baseline + child.y_offset, child.text)
+                        base_x += child.width
                     self.canv.setFillColor(colors.HexColor("#374151"))
                     self.canv.setFont(FONT_NAME, self.ruby_font_size)
                     self.canv.drawString(

@@ -334,7 +334,10 @@ def ingest_work(
     source_filename: str,
     source_url: str,
 ) -> dict[str, Any]:
-    html = source_bytes.decode("cp932")
+    # A small number of Aozora files declare Shift_JIS but contain isolated
+    # invalid bytes in their publisher notes.  Preserve the rest of each work
+    # instead of rejecting the whole corpus entry.
+    html = source_bytes.decode("cp932", errors="replace")
     parser = TreeParser()
     parser.feed(html)
     canonicalizer = Canonicalizer(source_url)

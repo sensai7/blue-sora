@@ -12,6 +12,8 @@ from typing import Any, Iterable
 
 from fugashi import Tagger
 
+from blue_sora.joyo import JOYO_KANJI
+
 
 MODEL_VERSION = "blue-sora-difficulty-v1"
 SENTENCE_BOUNDARY_RE = re.compile(r"(?<=[。！？!?])|\n+")
@@ -128,6 +130,13 @@ def scaled(value: float | None, floor: float, ceiling: float) -> float | None:
     return max(0.0, min(100.0, (value - floor) / (ceiling - floor) * 100.0))
 
 
+def percentile(values: list[int], fraction: float) -> int | None:
+    """Return the nearest-rank percentile for a non-empty list of values."""
+    if not values:
+        return None
+    return sorted(values)[math.ceil(len(values) * fraction) - 1]
+
+
 def finalize(
     base: WorkBase,
     corpus_words: Counter[str],
@@ -138,6 +147,7 @@ def finalize(
     hapax_words = sum(count == 1 for count in base.words.values())
     unique_kanji = len(base.kanji)
     hapax_kanji = sum(count == 1 for count in base.kanji.values())
+    non_joyo_kanji = sum(count for character, count in base.kanji.items() if character not in JOYO_KANJI)
     average_sentence_length = (
         sum(base.sentence_word_counts) / len(base.sentence_word_counts)
         if base.sentence_word_counts else None
@@ -185,7 +195,9 @@ def finalize(
             "hapax_words_percent": round(hapax_words / unique_words * 100, 2) if unique_words else None,
             "unique_kanji": unique_kanji,
             "hapax_kanji": hapax_kanji,
+            "non_joyo_kanji": non_joyo_kanji,
             "average_sentence_length": round(average_sentence_length, 2) if average_sentence_length is not None else None,
+            "sentence_length_p90": percentile(base.sentence_word_counts, 0.9),
             "characters": base.characters,
             "sentences": base.sentences,
         },

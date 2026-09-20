@@ -25,8 +25,12 @@ run the removal tool first without `--apply`; it defaults to a dry run:
 ```
 
 The default reduced set includes works attributed to 江戸川乱歩, 福沢諭吉,
-樋口夏子, or 樋口一葉. In the supplied metadata, all Natsuko Higuchi works
-are catalogued under her pen name 樋口一葉.
+樋口夏子, 樋口一葉, 夏目漱石, 森鴎外, 芥川龍之介, 太宰治, 田山花袋,
+徳田秋声, 谷崎潤一郎, 二葉亭四迷, 坪内逍遥, 山本周五郎, 上田敏, or
+小泉八雲. In the
+supplied metadata, all Natsuko Higuchi works are catalogued under her pen name
+樋口一葉, and Akutagawa's name is catalogued with the variant 竜 in
+芥川竜之介.
 
 See [the corpus format analysis](docs/corpus_format_analysis.md) and
 [the project roadmap](docs/roadmap.md).
