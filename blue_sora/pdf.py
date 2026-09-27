@@ -750,7 +750,13 @@ def write_bytes_if_changed(path: Path, payload: bytes) -> tuple[str, bool]:
     return checksum, True
 
 
-def build_pdfs(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
+def build_pdfs(
+    catalog_dir: Path,
+    output_dir: Path,
+    *,
+    work_ids: set[str] | None = None,
+    validate: bool = True,
+) -> dict[str, Any]:
     register_font()
     catalog = json.loads((catalog_dir / "indexes" / "catalog.json").read_text(encoding="utf-8"))
     author_index = json.loads((catalog_dir / "indexes" / "authors.json").read_text(encoding="utf-8"))
@@ -759,7 +765,7 @@ def build_pdfs(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
     manifest_path = output_dir / "pdf-manifest.json"
     previous = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.is_file() else {}
     previous_outputs = previous.get("outputs", {})
-    outputs: dict[str, dict[str, Any]] = {}
+    outputs: dict[str, dict[str, Any]] = dict(previous_outputs) if work_ids is not None else {}
     download_dir = output_dir / "downloads"
     generated = 0
     unchanged = 0
@@ -767,6 +773,8 @@ def build_pdfs(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
     expected: set[str] = set()
     for catalog_work in catalog["works"]:
         raw_id = catalog_work["id"].rsplit(":", 1)[-1]
+        if work_ids is not None and raw_id not in work_ids:
+            continue
         work = json.loads((catalog_dir / "works" / f"{raw_id}.json").read_text(encoding="utf-8"))
         work_authors = [authors[author_id] for author_id in work["author_ids"]]
         filename = export_filename(work, work_authors, "pdf")
@@ -785,7 +793,7 @@ def build_pdfs(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
             continue
         try:
             payload = build_pdf(work, work_authors, catalog_dir)
-            validation = validate_pdf_bytes(payload, work)
+            validation = validate_pdf_bytes(payload, work) if validate else {}
             checksum, changed = write_bytes_if_changed(destination, payload)
             if error_marker.is_file():
                 error_marker.unlink()
@@ -801,7 +809,7 @@ def build_pdfs(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
             if destination.is_file():
                 destination.unlink()
             write_bytes_if_changed(error_marker, (str(error) + "\n").encode("utf-8"))
-    if download_dir.is_dir():
+    if work_ids is None and download_dir.is_dir():
         for path in download_dir.glob("*.pdf"):
             if path.name not in expected:
                 path.unlink()

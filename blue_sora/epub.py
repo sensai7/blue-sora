@@ -441,7 +441,13 @@ def write_bytes_if_changed(path: Path, payload: bytes) -> tuple[str, bool]:
     return checksum, True
 
 
-def build_epubs(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
+def build_epubs(
+    catalog_dir: Path,
+    output_dir: Path,
+    *,
+    work_ids: set[str] | None = None,
+    validate: bool = True,
+) -> dict[str, Any]:
     catalog = json.loads((catalog_dir / "indexes" / "catalog.json").read_text(encoding="utf-8"))
     author_index = json.loads((catalog_dir / "indexes" / "authors.json").read_text(encoding="utf-8"))
     authors = {author["id"]: author for author in author_index["authors"]}
@@ -449,10 +455,14 @@ def build_epubs(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
     generated = 0
     unchanged = 0
     failed = 0
-    outputs: dict[str, str] = {}
+    manifest_path = output_dir / "epub-manifest.json"
+    previous = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.is_file() else {}
+    outputs: dict[str, str] = dict(previous.get("outputs", {})) if work_ids is not None else {}
     expected: set[str] = set()
     for catalog_work in catalog["works"]:
         raw_id = catalog_work["id"].rsplit(":", 1)[-1]
+        if work_ids is not None and raw_id not in work_ids:
+            continue
         work = json.loads((catalog_dir / "works" / f"{raw_id}.json").read_text(encoding="utf-8"))
         work_authors = [authors[author_id] for author_id in work["author_ids"]]
         filename = export_filename(work, work_authors, "epub")
@@ -461,20 +471,21 @@ def build_epubs(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
         error_marker = download_dir / f"{filename}.error.txt"
         try:
             payload = build_epub(work, work_authors, catalog_dir)
-            validation = validate_epub_bytes(payload, expected_identifier=work["id"])
+            validation = validate_epub_bytes(payload, expected_identifier=work["id"]) if validate else None
             checksum, changed = write_bytes_if_changed(destination, payload)
             if error_marker.is_file():
                 error_marker.unlink()
             generated += int(changed)
             unchanged += int(not changed)
             outputs[f"downloads/{filename}"] = checksum
-            outputs[f"validation/{filename}"] = f'{validation["entries"]}:{validation["xhtml"]}'
+            if validation is not None:
+                outputs[f"validation/{filename}"] = f'{validation["entries"]}:{validation["xhtml"]}'
         except Exception as error:  # preserve per-work failure diagnostics without hiding other books
             failed += 1
             if destination.is_file():
                 destination.unlink()
             write_bytes_if_changed(error_marker, (str(error) + "\n").encode("utf-8"))
-    if download_dir.is_dir():
+    if work_ids is None and download_dir.is_dir():
         for path in download_dir.glob("*.epub"):
             if path.name not in expected:
                 path.unlink()
@@ -485,6 +496,5 @@ def build_epubs(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
         "failed": failed,
         "outputs": dict(sorted(outputs.items())),
     }
-    manifest_path = output_dir / "epub-manifest.json"
     write_bytes_if_changed(manifest_path, (json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8"))
     return {"works": len(catalog["works"]), "generated": generated, "unchanged": unchanged, "failed": failed}

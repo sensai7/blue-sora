@@ -1,5 +1,5 @@
 {
-  "failed": 6,
+  "failed": 0,
   "font": {
     "family": "BIZ UD Mincho",
     "license": "SIL Open Font License 1.1",
@@ -3480,6 +3480,14 @@
       "pages": 8,
       "sha256": "f298c94281facf1fd7d695cea0f2b852ac8e9424ce18b8dc2fd5035b9e5d001e"
     },
+    "江戸川乱歩-「悪霊物語」自作解説-aozora-059399.pdf": {
+      "fingerprint": "5c27b6534784bfc250ac648f80908cf02bd094bf4abbb85e7f3b2f9555836f78",
+      "sha256": "cdf0e407a091ab1467ef089294ccda537ceeb3b55ba8eec5f83eb0e03c480ee3"
+    },
+    "江戸川乱歩-おれは二十面相だ-aozora-056690.pdf": {
+      "fingerprint": "46d06f481439d8e389640eb5d2c94bfed6a9f11457d6aa469a37052bd3dbc857",
+      "sha256": "a2bbeeac5bff0849bd46bbdd570ad05a77f838cea40179bcc466392525dc1978"
+    },
     "江戸川乱歩-お勢登場-aozora-057504.pdf": {
       "fingerprint": "0aa64b56fc38a208441f1d3efa34b490ef63bc5608e1ac0687f9262c62f29919",
       "fonts": 120,
@@ -3529,6 +3537,10 @@
       "pages": 130,
       "sha256": "d39482d60e13e525c775e1b849d0ddbfcc46310298b79436fce57f67cdbbdfb8"
     },
+    "江戸川乱歩-モノグラム-aozora-057514.pdf": {
+      "fingerprint": "f78e0cc7be99dcaf75de253a2ad2b0948b9a527612ea25ec7c1bbafb325cba8c",
+      "sha256": "e46e40c066cad2646e3c1e2ec02b7649e958a1b731157856090119f6fee04d4f"
+    },
     "江戸川乱歩-一人の芭蕉の問題-aozora-057414.pdf": {
       "fingerprint": "802db8a98a97a7bf9fb62b211a480da05348c0cd578a2d714f08b1b6b7f47310",
       "fonts": 27,
@@ -3542,6 +3554,10 @@
       "images": 0,
       "pages": 14,
       "sha256": "b5305bcf880caf47e3410c2fbbb6472ae5b6b4eb3cc2448adb897d869107815b"
+    },
+    "江戸川乱歩-一寸法師-aozora-058053.pdf": {
+      "fingerprint": "c20a3dfc894bc0a42a4a6a7f3b1129a03f7d7f8b75d2bd2c5492190550c62f56",
+      "sha256": "f8dba891d54d8eb9ee4633e7277fd541504c6ebf05bce0f8f44b12056bd9c252"
     },
     "江戸川乱歩-一枚の切符-aozora-057182.pdf": {
       "fingerprint": "720c9a0552c4c7be695e57342843cb8098ec919b28b1523ec40ada991d5009f5",
@@ -3571,12 +3587,32 @@
       "pages": 25,
       "sha256": "54a9b1df9fb89ec25b795df753da2752b04b111263b02b3caf6f196a5e377592"
     },
+    "江戸川乱歩-人でなしの恋-aozora-057511.pdf": {
+      "fingerprint": "097f7903592d3cda2c243d56ab1525bad2a36fe9c27fcb0efcd220d053391c3e",
+      "sha256": "2196ba03842d63635c7f8c5cfc997a22fba53a8f3a4eecaddab9c34321529e9b"
+    },
     "江戸川乱歩-人間椅子-aozora-056648.pdf": {
       "fingerprint": "7bd162a5831964a758b29c79da8eeb2083ab6ec2b1ae33a493b3836983850eda",
       "fonts": 135,
       "images": 0,
       "pages": 27,
       "sha256": "288d4104974937f034d034060ca58958ffd45b93ff889787ac6e7fba9a7761ab"
+    },
+    "江戸川乱歩-人間豹-aozora-058170.pdf": {
+      "fingerprint": "bac5dae6901a8e6cf3b955771c77de3edcc19129b9b06fff2bf7feae1cabb985",
+      "sha256": "b783c08fb319cc02b89bcfcb09ebd66102012bf3328c45a53e5af7522bd01ec3"
+    },
+    "江戸川乱歩-仮面の恐怖王-aozora-056688.pdf": {
+      "fingerprint": "d5003a60acff0c79c4327074a34f3503a0905f4f2a19c47c949b9949a60a9206",
+      "sha256": "9b95c9cbbc556f5863b674c6d3f1eb6587cbc1e71410598662ef7f5c90be3c71"
+    },
+    "江戸川乱歩-何者-aozora-057243.pdf": {
+      "fingerprint": "70a87943e128fa20826757c1a076bd4d6f28f90abdcb399cd92cba4ebf8f76fd",
+      "sha256": "a067d9607fd746afe34b9d359030da2c71903f4de2913ba972529b118fde1b1d"
+    },
+    "江戸川乱歩-偉大なる夢-aozora-057531.pdf": {
+      "fingerprint": "9310a79104555a95d1cf1c3b9508c2ba8c97f6a011df0f2c6f25270bebc03b30",
+      "sha256": "3f3c4b403f2c14dbb5b811a28bccd96efa98ca29de6ffe51be1fa168b17394bc"
     },
     "江戸川乱歩-双生児-aozora-057187.pdf": {
       "fingerprint": "1b5a76499e4ed19fe9fc6f9d325a25bcd55bbdfb91ace8803e0e874739cf5d45",
@@ -3585,12 +3621,24 @@
       "pages": 21,
       "sha256": "fa4ab9e54f0f27ccd273c7d8511e3ed85de5beff1e029d5f1d4d2f6ed4b4d621"
     },
+    "江戸川乱歩-吸血鬼-aozora-056658.pdf": {
+      "fingerprint": "446cb150ab3c8540b0cea68af27e47fddb94aec899a8e08932f2c3057f96ee62",
+      "sha256": "08036e73fa83f982ad7f8b8c00638e268808298980d051f022fffde46d121042"
+    },
+    "江戸川乱歩-地獄風景-aozora-057519.pdf": {
+      "fingerprint": "914ce032ad9eb933feb133875df473a737fe693e98cf4ad2ca29b69e854400af",
+      "sha256": "a7ee4da9238cc188e310ef38870ff2281898bae5b6b675b91fd981d5fd1a1779"
+    },
     "江戸川乱歩-塔上の奇術師-aozora-057109.pdf": {
       "fingerprint": "3411bd1c57ace4dbccc422f14c67120053096ada2cdeb2929f10f14eb6cec701",
       "fonts": 592,
       "images": 0,
       "pages": 148,
       "sha256": "c7ef21c1754d16cf26771c5b1f47b4dca303b457d0eff15b0b8b742b59e0ea62"
+    },
+    "江戸川乱歩-夜光人間-aozora-056684.pdf": {
+      "fingerprint": "b20250783f69d7f970f114dc6708166ee56bb26fc7f2c73762ab144c69948ec5",
+      "sha256": "711eadb610c75908c0f50c2dc8830abc354d03e97dc23d77c2ecb249eb856dda"
     },
     "江戸川乱歩-夢遊病者の死-aozora-057195.pdf": {
       "fingerprint": "992c88b4ba44cc2317833da426a626f606d08dca28f4aa7ef692138ebf43b1a6",
@@ -3599,12 +3647,52 @@
       "pages": 22,
       "sha256": "5f3776789c8bbd325d7245b3c2c916b73b0f62622036ab8904d1b9bc133cc157"
     },
+    "江戸川乱歩-大金塊-aozora-057106.pdf": {
+      "fingerprint": "90fbcf25a8f8d818b7412f6f4b21f9767830fba95b55b8565a29adb34d7ff5bf",
+      "sha256": "8580741effd6c358e639c3abd1d074148f46295530c0ec885397b00ec5ea51ba"
+    },
+    "江戸川乱歩-天空の魔人-aozora-056687.pdf": {
+      "fingerprint": "ae8ff76f9c8a0cce3d3bcfebc02cd2dbc378c941177daf7982d7fe0e1ea2de04",
+      "sha256": "ad690d029fd7c6d7154af1be018bd614f317f9e37814168d7b60fa248a71f997"
+    },
+    "江戸川乱歩-奇面城の秘密-aozora-056683.pdf": {
+      "fingerprint": "07f8115b184e4cfd12d9a08721f75cefa37d409e2c91c5a3ecc123a4eacf1149",
+      "sha256": "3ba34f078ccbdfffae9116c7dad51f522222d86d567f0bb944aba4ca7221e595"
+    },
+    "江戸川乱歩-女妖-aozora-059305.pdf": {
+      "fingerprint": "3b1302777c833e4a1b11c56ff689d55084c969af8f30338599b15fcd74d9b184",
+      "sha256": "49ed058bc80a229ef9950f8d08216e4c3fb7a74b966843884a1ac29bda183430"
+    },
+    "江戸川乱歩-妖人ゴング-aozora-056681.pdf": {
+      "fingerprint": "b8481eaf7e8d99325f2cf56fc00f8f5e63ad03bc92b5517d668364d44ad2fb54",
+      "sha256": "9d53e2a643ccdb3a67ab6ab4836b9cd284fa4df585c088734bc4ba8dc8481fcc"
+    },
     "江戸川乱歩-妖怪博士-aozora-056670.pdf": {
       "fingerprint": "79bd6f7c29b54d7c5203cefb76f01fa92219d88e8cebd81cd5753b14634d7ce6",
       "fonts": 1125,
       "images": 0,
       "pages": 225,
       "sha256": "d31b19976ecc589ae54e90f125a4dcdaf4b7d38580d4e80349976322b29f3b3c"
+    },
+    "江戸川乱歩-妖星人Ｒ-aozora-056691.pdf": {
+      "fingerprint": "05957697528ba61579252809f1258a3bbdd0d0138576b096b6cac4de49b17b21",
+      "sha256": "63d2ccc15ed1c53f1b66664dbeb75204a446078e973896ea9460b21cc627fa6d"
+    },
+    "江戸川乱歩-妖虫-aozora-057522.pdf": {
+      "fingerprint": "168b34938367a3bb313aa8a56dd67c2c79928204f44997327127ec22af7e44c5",
+      "sha256": "ea193382116634edc1e3c02731832f4ae5da1a525cda13e6550091e1f39e2e42"
+    },
+    "江戸川乱歩-妻に失恋した男-aozora-058464.pdf": {
+      "fingerprint": "e9230e165fbffdfd6f45c0f6679d2b8f45839099423d2c9ae86139613545f5c7",
+      "sha256": "ce20483d111e9f17d4510d06b73069da7efb274771283ba1fcb82794b576d0e3"
+    },
+    "江戸川乱歩-妻のこと-aozora-059526.pdf": {
+      "fingerprint": "fc8c9f9b363cebb71f8925ba2174c362f406a76ee2ae108ab2c751df987b3e1e",
+      "sha256": "ff1de0714a476e2abde2700a58b65dbd87e77cb2b7647e054cd791a2a5470a56"
+    },
+    "江戸川乱歩-孤島の鬼-aozora-057849.pdf": {
+      "fingerprint": "7d7dcecca08be233b206ebc7f9527d72900c46a53afe9af88debd318483cb058",
+      "sha256": "0679973257edb16672a316e977ac99ec8260016358ffd0cbac65d12e45409145"
     },
     "江戸川乱歩-宇宙怪人-aozora-056674.pdf": {
       "fingerprint": "6ea2fa1d00cc60fcfc60b217dfe13a8494f71942f6d99f51f0cc7444223ceaf0",
@@ -3633,6 +3721,10 @@
       "images": 0,
       "pages": 23,
       "sha256": "ab34aa32d3a54efa0ada71a6970de6954bc9b4b7790adc424b586963c9035a26"
+    },
+    "江戸川乱歩-影男-aozora-058486.pdf": {
+      "fingerprint": "876d7ae6dd5aaf7f2cd09097686a57b2e470ee360645c833c1720032065ad37a",
+      "sha256": "5b6f459c4dee725bc49574ffd76d6d18331b1187812e88e657d1c3be23237628"
     },
     "江戸川乱歩-心理試験-aozora-056646.pdf": {
       "fingerprint": "9cd602e484d8783efc6b486fb681485cd72d38e7c73bfc3212b3dc217ec32e34",
@@ -3669,6 +3761,18 @@
       "pages": 41,
       "sha256": "2cf7f25e205f758851a7dae125e788f28aa27459b8d9fef52b54a3fb6b33c82d"
     },
+    "江戸川乱歩-恐怖王-aozora-057517.pdf": {
+      "fingerprint": "9a7023f24400b1bdc89242b8d0a8efa2b8da86c38faec6a7bc94d341b0b285e5",
+      "sha256": "12be72c76906ee829b4d508dec6bf566a26473a47f4dccd7c65f0384e9a83e68"
+    },
+    "江戸川乱歩-悪霊-aozora-057515.pdf": {
+      "fingerprint": "fa20eb332487c0ee11d4c5af3c6007cbf73479c25a99d8bf9576908d1c923492",
+      "sha256": "c7f234f67079ca3524d468aff64760b5181175da0a7420394d44985574f8eb49"
+    },
+    "江戸川乱歩-悪霊物語-aozora-058699.pdf": {
+      "fingerprint": "74e49a368ad87028e16de53d79cc8d951335e7205aa5e501bed63be28520b655",
+      "sha256": "b05f68e780c66e9a5a81b370b6f5dc5a042dd65fbd542dca4eb25aeb22ed2643"
+    },
     "江戸川乱歩-悪魔の紋章-aozora-057240.pdf": {
       "fingerprint": "6a9b6419de4623521b6ac4528c32d319819538c39d273a553dce443fa84f4982",
       "fonts": 2502,
@@ -3682,6 +3786,10 @@
       "images": 0,
       "pages": 30,
       "sha256": "4f0a020078bc9e2bd1ccbc9b1b931ab433a8160ab3429b97a4e78fe103a854e0"
+    },
+    "江戸川乱歩-指-aozora-058465.pdf": {
+      "fingerprint": "e75d454684bafae3657516e58a4915a59c9d09332a62cc0fe130cee997e5f2ed",
+      "sha256": "c296bbda448de6ad344e12823ccb359766cc5235f81a8535b2406f20a6cb2cf6"
     },
     "江戸川乱歩-指環-aozora-057197.pdf": {
       "fingerprint": "354325a91951d13e73be2c1c9d2b36d7c259e5da9778f5fd2eedb480c1213cdc",
@@ -3697,6 +3805,10 @@
       "pages": 224,
       "sha256": "c0b655337d1e8fae16f5a6e3f3e2502bb6387bbd9668bfd13f928df6ab83a530"
     },
+    "江戸川乱歩-探偵少年-aozora-056686.pdf": {
+      "fingerprint": "02cc8f88037a7620d249db963bc049844d5e203fea62abfa975bf699154e6d2e",
+      "sha256": "52a9eebf7d0ecc8d3df809fa14333969615013b7513e0d434b0fc5ba81456a3c"
+    },
     "江戸川乱歩-接吻-aozora-057186.pdf": {
       "fingerprint": "cff706664a6ada3e0e2c7c605808a9d3eb621f0ef4640d3f8aa63c2c67f9ee86",
       "fonts": 60,
@@ -3704,12 +3816,48 @@
       "pages": 15,
       "sha256": "7f39a353ca7d2348d6f44916538f0f71a085aa27c6a4a158b9e4a2adca49ab32"
     },
+    "江戸川乱歩-断崖-aozora-058462.pdf": {
+      "fingerprint": "4752c2ca9fc30e26a3369eb3f6c116dc25b4bb7063d1a7392ad4c42f45324d8d",
+      "sha256": "8413d43c0a9577b8463985652687b9738d996fc0fe69bacf41e8134a7525e518"
+    },
+    "江戸川乱歩-新宝島-aozora-057532.pdf": {
+      "fingerprint": "2249b11cd6262b24b46bb1c76069374def58dc4ac8fba4d4c7e93cd98f50700f",
+      "sha256": "2c2b977da565e2a149cb366c02dfdd382f96d14d9ac088e46e73cfce0719e0ea"
+    },
     "江戸川乱歩-日記帳-aozora-057190.pdf": {
       "fingerprint": "41dd3ddb40f39d40e44d707adc9bcc5fc7a2aee8839b47dc30e7fa0f8c0c7da1",
       "fonts": 42,
       "images": 0,
       "pages": 14,
       "sha256": "bd5b824390c90e07dce10a6aa504a90dcf4f3ceed1c9e2260f75f9b16c23ae63"
+    },
+    "江戸川乱歩-智恵の一太郎-aozora-057533.pdf": {
+      "fingerprint": "a8818334ce610c9c33cb8219437e9142dd53cf906b5f121573854e3143d6132f",
+      "sha256": "d361c129f6040f6171fcd1e4874d4961927cd8b6d33c830ac84a1bd72a546cdf"
+    },
+    "江戸川乱歩-暗黒星-aozora-058333.pdf": {
+      "fingerprint": "c3a9841e6e7a9ff1f3d6aeda6ae9cda7122884c91e20064ea812f788355716ab",
+      "sha256": "d5cd3ad7773183bd50e7402d31eaa42bb7da2f750ec6d603e7699c9a874b1dda"
+    },
+    "江戸川乱歩-月と手袋-aozora-058463.pdf": {
+      "fingerprint": "1e821d4e8a5e5a2e27125d6ac41db58ec48a8e1a7d5d6bc332e7f65acb0c3da1",
+      "sha256": "ff58b324e065700863b89c148c3f70648261bb110a4ababfc8516bac7bad6e17"
+    },
+    "江戸川乱歩-木馬は廻る-aozora-057513.pdf": {
+      "fingerprint": "df815dcc6557f203e6dc0ae51bc14736491067b4aa22e631078fc2ce54eca67a",
+      "sha256": "b0f985f1b138f8a9b5c1b77a9e822338fea66cfd76a7f8ddd95f2b7acd878a1a"
+    },
+    "江戸川乱歩-殺人迷路-aozora-057518.pdf": {
+      "fingerprint": "dfad46febf9c66f381ec60af3e080e9da3be9528a162fba054fdcbe843d884a4",
+      "sha256": "37820f09695c897a733be225c24fc6923dfbf0e1dfc1388f4198ff9dca0ae26a"
+    },
+    "江戸川乱歩-毒草-aozora-057509.pdf": {
+      "fingerprint": "e352f2d6fba68d8280fdef69792ea6322d04b68e769849091f1c9c50cf6e9e7c",
+      "sha256": "428f065d404ad62c32c69bb4c6507d51fc224b039b3b9ed34471b1ac93aa39a6"
+    },
+    "江戸川乱歩-江川蘭子-aozora-058590.pdf": {
+      "fingerprint": "2b4f8ef50072ca041a180773cf82b735f100cc45d215423049de956453f09d95",
+      "sha256": "2e65ceefbf1e3a09cfd24d5dd9f36f9c6eb7a557f8fec60026ac7da88433d6fe"
     },
     "江戸川乱歩-海底の魔術師-aozora-056677.pdf": {
       "fingerprint": "a0cd2888ee95b4365fc945c187f4eb3ce6ce479ea79d32d9fc0da4da5e6386a8",
@@ -3732,12 +3880,32 @@
       "pages": 11,
       "sha256": "0297a6cf78f3859775da96cab1f5ab1de00beab2d493f9f7cc2015254ceebe72"
     },
+    "江戸川乱歩-火繩銃-aozora-057520.pdf": {
+      "fingerprint": "828353199f883285d77acf1b877ef6ee6300a693be839811c87b46ce27bbad30",
+      "sha256": "600fd8faacda89811986a31c6582a65949cb22d549edd826c6e7b6b34747b21f"
+    },
+    "江戸川乱歩-灰神楽-aozora-057510.pdf": {
+      "fingerprint": "396a0f0726f7957123238988419c696f5a8a4eebec3e2e2e5085c6d5f8a6ea05",
+      "sha256": "98b51a7f9536c840f72f86141e33b78c1bf35f01e4f72317efeb380d478f201c"
+    },
     "江戸川乱歩-灰色の巨人-aozora-056676.pdf": {
       "fingerprint": "57cdf71eec69ec9cde0f0e21f7049f2cac7de4cb0db0023f232989ca82f631ba",
       "fonts": 584,
       "images": 0,
       "pages": 146,
       "sha256": "5f2bb1888d0e1aa4b125e7f6ac171fbc5b5e3b3b5501d54975d73e316e2c0d9b"
+    },
+    "江戸川乱歩-猟奇の果-aozora-058467.pdf": {
+      "fingerprint": "27465e6fe6cc6ddcc9b3f18ed1d481a8db12027e22d73703d87f7fe30687e132",
+      "sha256": "1bbd513a553b8ab9ac3ec85f0f6cdf640089f715030c516552403e9b30816f9b"
+    },
+    "江戸川乱歩-畸形の天女-aozora-058487.pdf": {
+      "fingerprint": "6d0cb182d1b5218aa713ce90661f052ea4df986373727428eb56b8a0c34cd961",
+      "sha256": "668bd6de4b905999d57f9b351e3d202beb90e47ad9f44f22b2b83753da5da3f9"
+    },
+    "江戸川乱歩-疑惑-aozora-057184.pdf": {
+      "fingerprint": "4054e7b83a7f6b98b0dc4400794e395718953fcc4872a40090dc84d0f858ba7f",
+      "sha256": "dfecdb863fb4724b53e10e6091d79458de8832ef952900cd5380278916965bfe"
     },
     "江戸川乱歩-白昼夢-aozora-057192.pdf": {
       "fingerprint": "8ee31913e253d77650be12c1a51bad6fe12fcf05debd90fc924883bd49096296",
@@ -3746,12 +3914,24 @@
       "pages": 10,
       "sha256": "8fb1267a162efe6945bac512b46b0ac8208fd0891d7dd0d79247e2ea9f2c87de"
     },
+    "江戸川乱歩-白髪鬼-aozora-057244.pdf": {
+      "fingerprint": "2a68b218c1d59ed853083138c29d8ff4a2e1b4f544f1ce981dd3df531f54933f",
+      "sha256": "d5a776bcd379cfa346ff191d876e2a45d418f00ac8e6fab45dc5302b8042f5db"
+    },
     "江戸川乱歩-百面相役者-aozora-057194.pdf": {
       "fingerprint": "2f8779a472d1cbb4c95ad0e876a5bcecb325d26f171d30b55d169b5f2bcfafac",
       "fonts": 76,
       "images": 0,
       "pages": 19,
       "sha256": "f6b12d1ff24a8474334c95b004a3ee13ec6eb9a87771ac9f208b6ac3a511ab63"
+    },
+    "江戸川乱歩-盗難-aozora-057189.pdf": {
+      "fingerprint": "f1f8cd0b601f8e2f239b301b793e55224e4bfc843ac98cd68483c609a302ee45",
+      "sha256": "cc542e975fe15f6cb3d7f8324bedc04ae9ae6bee5e3c27d25f68cd6ba92d7603"
+    },
+    "江戸川乱歩-目羅博士の不思議な犯罪-aozora-057521.pdf": {
+      "fingerprint": "c67228ee480a901260429f9f442310b244d738b0618507b57ea4c30af07bef1d",
+      "sha256": "886429731a8ffc89017c9723d3b03ad89105e9818cc3c2ca689785bcf8d9822d"
     },
     "江戸川乱歩-算盤が恋を語る話-aozora-057188.pdf": {
       "fingerprint": "e9e4df6af80a7e168d33468c3ba10723d2e62cd9bcaf7f5a56c96fc690e0e43e",
@@ -3760,12 +3940,28 @@
       "pages": 17,
       "sha256": "088117d590c8125e38123bcdf4c5e2cc4abd73ce0f3df60b7956cfd654c3bf62"
     },
+    "江戸川乱歩-自作解説-aozora-057316.pdf": {
+      "fingerprint": "bd7aae72b54b6f7dea08b32678d8513b7590c72de72072a1850041c4e4a4f675",
+      "sha256": "6ac6e8889e31f0bf44e9282cdd42bf7bb05ba0a444a93b2c4c29e680540c74bb"
+    },
+    "江戸川乱歩-薔薇夫人-aozora-060174.pdf": {
+      "fingerprint": "c267a3e79f95f2061be620aad6b4e1431bf9016a7684b48b2901a1960a4edb35",
+      "sha256": "e9600c62ac7e436b8c543074227dce65b32570a7a936b845ffcc7395d531acc5"
+    },
     "江戸川乱歩-虎の牙-aozora-056672.pdf": {
       "fingerprint": "2bba2812b6677ab6ca94731deb5d0c229dedaa59d696a570b8c51dc21334dd83",
       "fonts": 692,
       "images": 0,
       "pages": 173,
       "sha256": "6fa67ff27b48038b1b674ba5c91839991fa17151986ac083f40903099491c5d5"
+    },
+    "江戸川乱歩-蟲-aozora-057245.pdf": {
+      "fingerprint": "104dcfaeec0a91b9cb421fc4b23570c1e6f4b93c1eb6e5fecb958e7a5d2a6439",
+      "sha256": "6b15818d7b4d4abb9ca4fe4d02ab818c084745dcbf0e1d4c6df3590d142341df"
+    },
+    "江戸川乱歩-覆面の舞踏者-aozora-057512.pdf": {
+      "fingerprint": "7b06084f2966dfe5b87ff9f6d9a9a96a6d2d50e3ff50371aa22d26fe73dbf960",
+      "sha256": "b6e0b2e23d5c994a9bcb59708be98298b056f6504cb460fad5ff8f1d2c69c4ab"
     },
     "江戸川乱歩-赤いカブトムシ-aozora-057105.pdf": {
       "fingerprint": "c6f6fde7800851178b485cf99360451a09e9923367673367c04ffef507e65310",
@@ -3780,6 +3976,10 @@
       "images": 0,
       "pages": 31,
       "sha256": "d5d04a16e8009313a371bc51dd152164929330d68298c5be6d8862d4220dc4fb"
+    },
+    "江戸川乱歩-超人ニコラ-aozora-057107.pdf": {
+      "fingerprint": "70b6b8954f03acac2f6c0c479df17b3376d6cff03810b410d9ce4a0c2146cbad",
+      "sha256": "69ffbb4246d6573efe825cd82c5799044b629a820a346839b69bfb48ccec0320"
     },
     "江戸川乱歩-踊る一寸法師-aozora-057505.pdf": {
       "fingerprint": "83acfcdbf8a9f4fb842a65c7e80354dd88fcdb593cf8347d9aee3615127b6363",
@@ -3816,12 +4016,20 @@
       "pages": 25,
       "sha256": "acbd6610b171028579316e1e05ff92ea72dc6dc329056b03733e7e266d910276"
     },
+    "江戸川乱歩-陰獣-aozora-057503.pdf": {
+      "fingerprint": "ece004053cf90a0c5cfabeb64dc668cfece15105deb2d61433712781837fb0f7",
+      "sha256": "a1ce5899f70b65da6dc806c0cb2eceba2cb53fc6dd1bd943bf9462e7271ee9a0"
+    },
     "江戸川乱歩-随筆銭形平次-aozora-054836.pdf": {
       "fingerprint": "4c96a99a092f3e013a16c6368fc8120e8355874d50ab9cb17a0aa5c091173dd3",
       "fonts": 36,
       "images": 0,
       "pages": 12,
       "sha256": "7715cc4fcc6d93d63d4521308ad51754ef3238a3d3b1c5826957595bdf324a5b"
+    },
+    "江戸川乱歩-電人Ｍ-aozora-056689.pdf": {
+      "fingerprint": "624fc88611928be4fa8f500b7bfda1bbef535efc2bdf63588a80c32c6bd0a116",
+      "sha256": "12dba5e8cbc1e21dcd1c32349d575fa0e3af33d827b123aa5786efdd7082a4c6"
     },
     "江戸川乱歩-青銅の魔人-aozora-056671.pdf": {
       "fingerprint": "88c4ac4e8dd00cd59fc0d26df37a9ed5dee74e51b219f25336b7c57dd389e765",
@@ -3830,12 +4038,28 @@
       "pages": 150,
       "sha256": "4d4435a996138c0d548da9eef6896d750275e44581a911d88bb0563fb4fa79e5"
     },
+    "江戸川乱歩-鬼-aozora-057516.pdf": {
+      "fingerprint": "2864cb74ce6b2039c835a7792bf01ead68f8514f00a5627213afe13055f829ae",
+      "sha256": "00635f9372b3c3520ea5879c723114c1ceeedd625743a744e383f7fc64c2b1f6"
+    },
+    "江戸川乱歩-魔法人形-aozora-056682.pdf": {
+      "fingerprint": "c020e07eaf0bacb74befe140deafc045b982c246209af5a4f8344bc2552903fe",
+      "sha256": "d538d055b6e9b55b0550abdd623f66e6dae8b0eaac696b2690ac9e2c8d2cc545"
+    },
     "江戸川乱歩-魔法博士-aozora-056679.pdf": {
       "fingerprint": "066f61470bdb273fc6e3f7778620725f57645f97ea630d4d5a28e01434c5015d",
       "fonts": 572,
       "images": 0,
       "pages": 143,
       "sha256": "af3bec565cf6aa916e4b0ce8a61a01de2a1474879fe4362bd22a68b6b2b33b33"
+    },
+    "江戸川乱歩-魔術師-aozora-056659.pdf": {
+      "fingerprint": "6075614e106ba0996f5174b3066eccb640d9731aac6355e238d395a728e8f8ce",
+      "sha256": "72d1427b16114d6c7755b645a50596dd5ac83d1f3979316368a9977a0550f45f"
+    },
+    "江戸川乱歩-黄金仮面-aozora-057241.pdf": {
+      "fingerprint": "d6bc5411a344209960b0062bf3dee4312a6e5713598523e8a0631b27ef566b06",
+      "sha256": "2a549b06fd38f3855d8c0026d29d45d0fa52c532d9c6dfb20421408cf16c4f0f"
     },
     "江戸川乱歩-黄金豹-aozora-056678.pdf": {
       "fingerprint": "d157c6f26e960523cf50d79983d0bcfa7b4662bca4f0c123e20d5b526caddf33",
@@ -6702,5 +6926,5 @@
     }
   },
   "schema_version": 1,
-  "work_count": 962
+  "work_count": 1117
 }
