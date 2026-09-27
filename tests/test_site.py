@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import unittest
 from pathlib import Path
 
@@ -42,6 +43,16 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(html.count('<div title='), 15)
         self.assertIn("Difficulty weights: lexical rarity 55% · kanji rarity 25% · sentence complexity 20%", html)
         self.assertNotIn("weight 55%", html)
+
+    def test_generated_work_page_includes_lazy_kanji_analysis_controls(self) -> None:
+        html = Path("build/site/works/aozora-058039/index.html").read_text(encoding="utf-8")
+        self.assertIn('data-kanji-analysis-trigger', html)
+        self.assertIn('data-kanji-analysis-dialog', html)
+        self.assertIn('id="kanji-analysis-dialog"', html)
+        manifest = json.loads(Path("build/site/site-manifest.json").read_text(encoding="utf-8"))
+        reference = manifest["assets"]["kanji_reference"]
+        self.assertIn(reference, html)
+        self.assertTrue((Path("build/site") / reference).is_file())
 
     def test_literary_era_uses_author_lifespan(self) -> None:
         self.assertEqual(literary_era("1901-02-03"), "Meiji")

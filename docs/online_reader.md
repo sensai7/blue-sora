@@ -21,6 +21,18 @@ visit unless the URL contains an explicit anchor. Reading progress is exposed
 as an accessible progress bar. Text size controls persist one global reader
 preference and degrade safely when browser storage is unavailable.
 
+## Kanji analysis
+
+Each work page includes an on-demand kanji visualizer in its learner profile.
+When opened, the shared browser script scans the rendered prose on that page;
+it excludes headings, ruby readings, and editorial notes. It groups detected
+ideographic characters into the current elementary-school allocation, the
+remaining Jōyō list, and other characters, with color intensity representing
+the number of occurrences.
+
+The visualizer is a reader aid only. Its results are not precomputed, stored in
+catalog artifacts, or used by the difficulty model.
+
 ## Export states
 
 Each EPUB and PDF control has one of three states:

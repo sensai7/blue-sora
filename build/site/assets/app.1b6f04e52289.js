@@ -293,3 +293,125 @@
     updatePosition();
   });
 })();
+
+(() => {
+  const trigger = document.querySelector("[data-kanji-analysis-trigger]");
+  const dialog = document.querySelector("[data-kanji-analysis-dialog]");
+  const content = document.querySelector("[data-reader-content]");
+  const reference = window.BLUE_SORA_KANJI_REFERENCE;
+  if (!trigger || !dialog || !content || !reference) return;
+
+  const groups = dialog.querySelector("[data-kanji-analysis-groups]");
+  const summary = dialog.querySelector("[data-kanji-analysis-summary]");
+  const kanjiPattern = /[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff々〆ヶ]/gu;
+  const collator = new Intl.Collator("ja", { numeric: true, sensitivity: "base" });
+  const elementaryByGrade = reference.elementary_by_grade.map((characters) => new Set(characters));
+  const elementary = new Set(reference.elementary_by_grade.join(""));
+  const joyo = new Set(reference.joyo);
+  let analysis;
+
+  function frequencyBand(count) {
+    if (count === 1) return 1;
+    if (count <= 3) return 2;
+    if (count <= 7) return 3;
+    return 4;
+  }
+
+  function sortedEntries(entries) {
+    return [...entries].sort((left, right) => right[1] - left[1] || collator.compare(left[0], right[0]));
+  }
+
+  function proseKanji() {
+    const counts = new Map();
+    const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        const excluded = node.parentElement?.closest("rt, [role='note'], h2, h3, h4");
+        return excluded ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    let node;
+    while ((node = walker.nextNode())) {
+      for (const character of node.nodeValue.match(kanjiPattern) || []) {
+        counts.set(character, (counts.get(character) || 0) + 1);
+      }
+    }
+    return counts;
+  }
+
+  function createGrid(entries) {
+    const grid = document.createElement("div");
+    grid.className = "kanji-tile-grid";
+    for (const [character, count] of sortedEntries(entries)) {
+      const tile = document.createElement("span");
+      const label = `${character}: ${count} occurrence${count === 1 ? "" : "s"}`;
+      tile.className = `kanji-tile kanji-tile--${frequencyBand(count)}`;
+      tile.setAttribute("role", "img");
+      tile.setAttribute("aria-label", label);
+      tile.title = label;
+      tile.textContent = character;
+      grid.append(tile);
+    }
+    return grid;
+  }
+
+  function createGroup(title, description, entries, gradeGroups) {
+    const section = document.createElement("section");
+    section.className = "kanji-analysis-group";
+    const heading = document.createElement("h3");
+    heading.textContent = title;
+    const copy = document.createElement("p");
+    copy.textContent = description;
+    section.append(heading, copy);
+    if (!entries.length) {
+      const empty = document.createElement("p");
+      empty.textContent = "No characters in this group occur in the prose.";
+      section.append(empty);
+      return section;
+    }
+    if (gradeGroups) {
+      gradeGroups.forEach((gradeEntries, index) => {
+        if (!gradeEntries.length) return;
+        const grade = document.createElement("section");
+        grade.className = "kanji-grade";
+        const gradeHeading = document.createElement("h4");
+        gradeHeading.textContent = `Grade ${index + 1}`;
+        grade.append(gradeHeading, createGrid(gradeEntries));
+        section.append(grade);
+      });
+    } else {
+      section.append(createGrid(entries));
+    }
+    return section;
+  }
+
+  function renderAnalysis() {
+    const counts = proseKanji();
+    const elementaryEntries = elementaryByGrade.map((grade) => [...counts].filter(([character]) => grade.has(character)));
+    const remainingJoyo = [...counts].filter(([character]) => joyo.has(character) && !elementary.has(character));
+    const other = [...counts].filter(([character]) => !joyo.has(character));
+    const occurrences = [...counts.values()].reduce((total, count) => total + count, 0);
+    summary.textContent = `${counts.size.toLocaleString()} unique kanji · ${occurrences.toLocaleString()} occurrences`;
+    groups.replaceChildren(
+      createGroup("Elementary school", "Characters assigned through grades 1–6.", elementaryEntries.flat(), elementaryEntries),
+      createGroup("Remaining Jōyō", "Jōyō kanji not assigned in elementary school.", remainingJoyo),
+      createGroup("Other", "Detected ideographic characters outside the Jōyō list.", other),
+    );
+  }
+
+  trigger.hidden = false;
+  trigger.addEventListener("click", () => {
+    if (!analysis) {
+      trigger.disabled = true;
+      trigger.textContent = "Preparing analysis…";
+      window.requestAnimationFrame(() => {
+        renderAnalysis();
+        analysis = true;
+        trigger.disabled = false;
+        trigger.textContent = "Kanji analysis";
+        dialog.showModal();
+      });
+      return;
+    }
+    dialog.showModal();
+  });
+})();

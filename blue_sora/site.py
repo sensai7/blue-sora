@@ -11,6 +11,7 @@ from typing import Any
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 
 from .catalog import write_if_changed
+from .joyo import ELEMENTARY_KANJI_BY_GRADE, JOYO_KANJI
 from .reader import export_state, render_blocks
 
 
@@ -110,6 +111,16 @@ def build_site(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
     authors = json.loads((catalog_dir / "indexes" / "authors.json").read_text(encoding="utf-8"))
     css_url, css_hash = fingerprinted_asset(ASSET_SOURCE_DIR / "styles.css", output_dir)
     js_url, js_hash = fingerprinted_asset(ASSET_SOURCE_DIR / "app.js", output_dir)
+    kanji_reference = {
+        "elementary_by_grade": ELEMENTARY_KANJI_BY_GRADE,
+        "joyo": "".join(sorted(JOYO_KANJI)),
+    }
+    kanji_payload = (
+        "window.BLUE_SORA_KANJI_REFERENCE = Object.freeze("
+        + json.dumps(kanji_reference, ensure_ascii=False, separators=(",", ":"))
+        + ");\n"
+    ).encode("utf-8")
+    kanji_url, kanji_hash = fingerprinted_payload("kanji-reference.js", kanji_payload, output_dir)
     favicon_url, favicon_hash = fingerprinted_asset(ASSET_SOURCE_DIR / "favicon.svg", output_dir)
     library_index = build_library_index(catalog["works"], authors["authors"])
     library_payload = (json.dumps(library_index, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
@@ -117,6 +128,7 @@ def build_site(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
     shared = {
         "css_url": css_url,
         "js_url": js_url,
+        "kanji_url": kanji_url,
         "favicon_url": favicon_url,
         "site_name": "Blue Sora",
         "generator_version": SITE_GENERATOR_VERSION,
@@ -222,6 +234,7 @@ def build_site(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
         work_page_count += 1
     outputs[css_url] = css_hash
     outputs[js_url] = js_hash
+    outputs[kanji_url] = kanji_hash
     outputs[favicon_url] = favicon_hash
     outputs[library_url] = library_hash
     outputs.update(media_outputs)
@@ -240,7 +253,7 @@ def build_site(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
         nojekyll.write_bytes(b"")
     outputs[".nojekyll"] = hashlib.sha256(b"").hexdigest()
 
-    expected_assets = {Path(css_url).name, Path(js_url).name, Path(favicon_url).name, Path(library_url).name}
+    expected_assets = {Path(css_url).name, Path(js_url).name, Path(kanji_url).name, Path(favicon_url).name, Path(library_url).name}
     for path in (output_dir / "assets").glob("*"):
         if path.is_file() and path.name not in expected_assets:
             path.unlink()
@@ -251,7 +264,13 @@ def build_site(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
         "generator_version": SITE_GENERATOR_VERSION,
         "catalog_fingerprint": source_manifest["corpus_fingerprint"],
         "work_count": len(works),
-        "assets": {"css": css_url, "javascript": js_url, "favicon": favicon_url, "library": library_url},
+        "assets": {
+            "css": css_url,
+            "javascript": js_url,
+            "kanji_reference": kanji_url,
+            "favicon": favicon_url,
+            "library": library_url,
+        },
         "outputs": dict(sorted(outputs.items())),
     }
     write_if_changed(output_dir / "site-manifest.json", manifest)
@@ -259,6 +278,6 @@ def build_site(catalog_dir: Path, output_dir: Path) -> dict[str, Any]:
         "pages": len(pages) + work_page_count,
         "written": written,
         "works": len(works),
-        "assets": 4,
+        "assets": 5,
         "media": len(media_outputs),
     }

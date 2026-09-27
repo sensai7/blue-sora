@@ -7,8 +7,9 @@
   <meta name="generator" content="blue-sora-site-v3">
   <title>『煤煙』の序 · Blue Sora</title>
   <link rel="icon" href="../../assets/favicon.7cf45319281f.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../assets/styles.b21d148adee7.css">
-  <script src="../../assets/app.b664781fad2b.js" defer></script>
+  <link rel="stylesheet" href="../../assets/styles.914e12155bb7.css">
+  <script src="../../assets/kanji-reference.ea35db62dcb0.js" defer></script>
+  <script src="../../assets/app.1b6f04e52289.js" defer></script>
 </head>
 <body class="work-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -66,6 +67,7 @@
         <p class="difficulty-score"><strong>42</strong><span>out of 100</span></p>
       <p class="metric-note">Model blue-sora-difficulty-v1 · status: ok</p>
       <p class="metric-note">Difficulty weights: lexical rarity 55% · kanji rarity 25% · sentence complexity 20%</p>
+      <button class="text-button kanji-analysis-trigger" type="button" data-kanji-analysis-trigger aria-label="Open kanji analysis" aria-haspopup="dialog" aria-controls="kanji-analysis-dialog" hidden>Kanji analysis</button>
     </div>
     <dl class="metric-grid">
       <div title="Word tokens in the prose, excluding whitespace, punctuation, and symbols."><dt>Words</dt><dd>1,193</dd></div>
@@ -85,6 +87,20 @@
       <div title="The word-token count at which the longest 10% of detected sentences begin. This highlights demanding passages that the average can hide."><dt>Long sentences (90th percentile)</dt><dd>43 words</dd></div>
     </dl>
   </section>
+
+  <dialog class="kanji-analysis-dialog" id="kanji-analysis-dialog" data-kanji-analysis-dialog aria-labelledby="kanji-analysis-title" aria-describedby="kanji-analysis-description">
+    <header class="kanji-analysis-header">
+      <div>
+        <p class="eyebrow">Reader aid</p>
+        <h2 id="kanji-analysis-title">Kanji analysis</h2>
+      </div>
+      <form method="dialog"><button class="kanji-analysis-close" type="submit" aria-label="Close kanji analysis">Close</button></form>
+    </header>
+    <p id="kanji-analysis-description" class="kanji-analysis-description">Characters are counted from this work’s prose when you open this panel. Ruby readings, headings, and editorial notes are excluded.</p>
+    <p class="kanji-analysis-summary" data-kanji-analysis-summary></p>
+    <p class="kanji-analysis-legend" aria-label="Occurrence color legend"><span class="kanji-frequency kanji-frequency--1" aria-hidden="true"></span> Once <span class="kanji-frequency kanji-frequency--2" aria-hidden="true"></span> 2–3 <span class="kanji-frequency kanji-frequency--3" aria-hidden="true"></span> 4–7 <span class="kanji-frequency kanji-frequency--4" aria-hidden="true"></span> 8+ occurrences</p>
+    <div class="kanji-analysis-groups" data-kanji-analysis-groups></div>
+  </dialog>
 
 
   <section class="reader-shell" aria-labelledby="read-here">

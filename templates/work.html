@@ -50,6 +50,7 @@
       {% endif %}
       <p class="metric-note">Model {{ work.analytics.model_version }} · status: {{ work.analytics.status }}</p>
       <p class="metric-note">Difficulty weights: lexical rarity {{ "%.0f" | format(work.analytics.difficulty.weights.lexical_rarity * 100) }}% · kanji rarity {{ "%.0f" | format(work.analytics.difficulty.weights.kanji_rarity * 100) }}% · sentence complexity {{ "%.0f" | format(work.analytics.difficulty.weights.sentence_complexity * 100) }}%</p>
+      <button class="text-button kanji-analysis-trigger" type="button" data-kanji-analysis-trigger aria-label="Open kanji analysis" aria-haspopup="dialog" aria-controls="kanji-analysis-dialog" hidden>Kanji analysis</button>
     </div>
     <dl class="metric-grid">
       <div title="Word tokens in the prose, excluding whitespace, punctuation, and symbols."><dt>Words</dt><dd>{{ "{:,}".format(work.analytics.metrics.length_words) }}</dd></div>
@@ -69,6 +70,20 @@
       <div title="The word-token count at which the longest 10% of detected sentences begin. This highlights demanding passages that the average can hide."><dt>Long sentences (90th percentile)</dt><dd>{% if work.analytics.metrics.sentence_length_p90 is not none %}{{ "{:,}".format(work.analytics.metrics.sentence_length_p90) }} words{% else %}Unavailable{% endif %}</dd></div>
     </dl>
   </section>
+
+  <dialog class="kanji-analysis-dialog" id="kanji-analysis-dialog" data-kanji-analysis-dialog aria-labelledby="kanji-analysis-title" aria-describedby="kanji-analysis-description">
+    <header class="kanji-analysis-header">
+      <div>
+        <p class="eyebrow">Reader aid</p>
+        <h2 id="kanji-analysis-title">Kanji analysis</h2>
+      </div>
+      <form method="dialog"><button class="kanji-analysis-close" type="submit" aria-label="Close kanji analysis">Close</button></form>
+    </header>
+    <p id="kanji-analysis-description" class="kanji-analysis-description">Characters are counted from this work’s prose when you open this panel. Ruby readings, headings, and editorial notes are excluded.</p>
+    <p class="kanji-analysis-summary" data-kanji-analysis-summary></p>
+    <p class="kanji-analysis-legend" aria-label="Occurrence color legend"><span class="kanji-frequency kanji-frequency--1" aria-hidden="true"></span> Once <span class="kanji-frequency kanji-frequency--2" aria-hidden="true"></span> 2–3 <span class="kanji-frequency kanji-frequency--3" aria-hidden="true"></span> 4–7 <span class="kanji-frequency kanji-frequency--4" aria-hidden="true"></span> 8+ occurrences</p>
+    <div class="kanji-analysis-groups" data-kanji-analysis-groups></div>
+  </dialog>
 
   {% if toc %}
   <nav class="work-toc" aria-labelledby="toc-title">
